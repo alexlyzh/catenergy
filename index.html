@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body class="page__body">
+    <header class="header">
+        <div class="container">
+        <div class="head-menu head-menu--mobile">
+            <a href="index.html" class="logo">
+                <picture class="logo__img">
+                    <source media="(min-width: 1340px)" srcset="img/header/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
+                    <img src="img/header/logo-mobile.svg" alt="Лого">
+                </picture>
+            </a>
+            <a href="index.html" class="txt-mob">
+                <svg class="txt-mob">
+                    <use xlink:href="img/sprite.svg#logo-txt-mob"></use>
+                </svg>
+            </a>
+            <button class="burger"><img src="img/header/burger.svg" alt="Меню"></button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link">Каталог продукции</a></li>
+                    <li class="nav__item"><a href="index.html" class="nav__link">Подбор программы</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="intro">
+            <h1 class="intro__heading">Функциональное <br>питание для котов</h1>
+            <p class="intro__text">Занялся собой? Займись котом!</p>
+            <picture>
+                <source type="img/webp" srcset="img/header/intro-can-mobile.webp">
+                <img class="intro__img" src="img/header/intro-can-mobile.png" alt="Корм для кошек Cat energy PRO">
+            </picture>
+            <button class="button intro__button intro__button--mobile">
+                <a href="#" class="button__link">Подобрать программу</a>
+            </button>
+        </section>
+    </div>
+    </header>
 </body>
 </html>

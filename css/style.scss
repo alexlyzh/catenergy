@@ -1,1 +1,48 @@
-@import "normalize.css";
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald.eot');
+  src: local('☺'), url('../fonts/Oswald.woff') format('woff'), url('../fonts/Oswald.ttf') format('truetype'), url('../fonts/Oswald.svg') format('svg');
+  font-weight: 400;
+}
+
+@import "base/normalize.css";
+@import "layout/header/header";
+@import "layout/general";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  outline: 1px red solid;
+  min-width: 320px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+  @media (min-width: 1340px) {
+    max-width: 1340px;
+    padding: 0 60px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
