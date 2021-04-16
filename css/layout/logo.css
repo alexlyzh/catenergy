@@ -1,0 +1,17 @@
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.logo__title {
+    justify-self: center;
+}
+
+@media (min-width: 748px) {
+    .logo__title {
+        display: none;
+    }
+}

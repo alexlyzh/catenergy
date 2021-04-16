@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+    display: grid;
+}
+
+/* Logo */
+
+@media (max-width: 748px) {
+    .header__logo {
+        z-index: 1;
+    }
+}
+
+/* Menu */
+
+@media (max-width: 748px) {
+    .header__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: burlywood;
+        opacity: 0.5;
+        padding-top: 20px;
+    }
+}
+

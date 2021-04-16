@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="page__body">
-    <header class="header">
-        <div class="container">
-            <div class="head-menu">
-                <a href="index.html" class="logo">
-                    <picture class="logo__img">
-                        <source media="(min-width: 1340px)" srcset="img/header/logo-desktop.svg">
-                        <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg">
-                        <img src="img/header/logo-mobile.svg" alt="Лого">
-                    </picture>
-                </a>
-                <a href="index.html" class="txt-mob">
-                    <svg class="txt-mob">
-                        <use xlink:href="img/sprite.svg#logo-txt-mob"></use>
-                    </svg>
-                </a>
-                <button class="burger"></button>
-            </div>
+    <header class="header container">
+        <div class="header__logo logo">
+            <a class="logo__img" href="index.html">
+                <picture>
+                    <source media="(min-width: 1260px)" srcset="img/header/logo-desktop.svg">
+                    <source media="(min-width: 748px)" srcset="img/header/logo-tablet.svg">
+                    <img src="img/header/logo-mobile.svg" alt="Лого">
+                </picture>
+            </a>
+            <a class="logo__title" href="index.html">
+                <img src="img/header/logo-txt-mob.svg">
+            </a>
         </div>
-        <nav class="nav nav--closed">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
-                <li class="nav__item"><a href="index.html" class="nav__link">Каталог продукции</a></li>
-                <li class="nav__item"><a href="index.html" class="nav__link">Подбор программы</a></li>
+        <nav class="header__menu menu container">
+            <button class="menu__button">
+                <svg class="menu__icon-cross menu__icon--invisible" id="cross" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+                </svg>
+                <svg class="menu__icon-menu" id="menu" aria-hidden="true" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5"/>
+                    <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5"/>
+                    <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link menu__link--active">Главная</a></li>
+                <li class="menu__item"><a href="index.html" class="menu__link">Каталог продукции</a></li>
+                <li class="menu__item"><a href="index.html" class="menu__link">Подбор программы</a></li>
             </ul>
         </nav>
-        <section class="intro">
+        <!-- <section class="intro">
             <h1 class="intro__heading">Функциональное <br>питание для котов</h1>
             <p class="intro__text">Занялся собой? Займись котом!</p>
             <picture>
@@ -43,18 +48,15 @@
             </picture>
         </section>
         <div class="container">
-            <button class="button header__button header__button--mobile">
-                <a href="#" class="button__link">Подобрать программу</a>
+            <button class="header__button header__button--mobile button">
+                <a class="button__link" href="#">Подобрать программу</a>
             </button>
-        </div>
+        </div> -->
     </header>
-
     <script>
-        let burgerButton = document.querySelector('.burger');
-        burgerButton.addEventListener('click', ev => {
-            ev.target.classList.toggle('burger--opened');
-            document.querySelector('nav').classList.toggle('nav--closed');
-        });
+        document.querySelector('.menu__button').addEventListener('click',ev => {
+            console.log('ev.target')
+        })
     </script>
 </body>
 </html>
