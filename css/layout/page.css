@@ -1,23 +1,41 @@
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .page {
-    font-family: Oswsld, sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus {
+    outline-color: #68b738;
 }
 
 .container {
-    border: 1px blueviolet solid;
+    /*border: 1px blueviolet solid;*/
+    box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 650px;
     min-width: 320px;
     margin: 0 auto;
   }
   
   @media (min-width: 748px) {
     .container {
-      max-width: 748px;
+      max-width: 992px;
     }
   }
   
   @media (min-width: 1260px) {
     .container {
-        max-width: 1260px;
+        max-width: 1340px;
     }
   }

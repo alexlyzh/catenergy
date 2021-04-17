@@ -5,57 +5,64 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="page__body">
     <header class="header container">
-        <div class="header__logo logo">
-            <a class="logo__img" href="index.html">
+        <div class="head-layout">
+            <a class="header__logo" href="index.html">
                 <picture>
                     <source media="(min-width: 1260px)" srcset="img/header/logo-desktop.svg">
                     <source media="(min-width: 748px)" srcset="img/header/logo-tablet.svg">
                     <img src="img/header/logo-mobile.svg" alt="Лого">
                 </picture>
             </a>
-            <a class="logo__title" href="index.html">
-                <img src="img/header/logo-txt-mob.svg">
+            <a class="header__title" href="index.html">
+                <img src="img/header/logo-txt-mob.svg" alt="Лого">
             </a>
-        </div>
-        <nav class="header__menu menu container">
-            <button class="menu__button">
-                <svg class="menu__icon-cross menu__icon--invisible" id="cross" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
-                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+            <button class="header__button" aria-controls="menu__list">
+                <svg class="header__icon header__icon--invisible" id="cross" aria-hidden="true" width="24" height="18" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke-width="1.5"/>
                 </svg>
-                <svg class="menu__icon-menu" id="menu" aria-hidden="true" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5"/>
-                    <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5"/>
-                    <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5"/>
+                <svg class="header__icon" id="menu" aria-hidden="true" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1.25" x2="24" y2="1.25" stroke-width="1.5"/>
+                    <line y1="9.25" x2="24" y2="9.25" stroke-width="1.5"/>
+                    <line y1="17.25" x2="24" y2="17.25" stroke-width="1.5"/>
                 </svg>
             </button>
-            <ul class="menu__list">
+        </div>
+        <nav class="header__menu menu visually-hidden">
+            <ul class="menu__list" id="menu__list">
                 <li class="menu__item"><a href="index.html" class="menu__link menu__link--active">Главная</a></li>
                 <li class="menu__item"><a href="index.html" class="menu__link">Каталог продукции</a></li>
                 <li class="menu__item"><a href="index.html" class="menu__link">Подбор программы</a></li>
             </ul>
         </nav>
-        <!-- <section class="intro">
-            <h1 class="intro__heading">Функциональное <br>питание для котов</h1>
-            <p class="intro__text">Занялся собой? Займись котом!</p>
-            <picture>
-                <source type="img/webp" srcset="img/header/intro-can-mobile.webp">
-                <img class="intro__img" src="img/header/intro-can-mobile.png" alt="Корм для кошек Cat energy PRO">
-            </picture>
-        </section>
-        <div class="container">
-            <button class="header__button header__button--mobile button">
-                <a class="button__link" href="#">Подобрать программу</a>
-            </button>
-        </div> -->
     </header>
+    <section class="intro">
+        <div class="container">
+        <h1 class="intro__heading">Функциональное <br>питание для котов</h1>
+        <p class="intro__text">Занялся собой? Займись котом!</p>
+        <picture>
+            <source type="img/webp" srcset="img/header/intro-can-mobile.webp">
+            <img class="intro__img" src="img/header/intro-can-mobile.png" alt="Корм для кошек Cat energy PRO">
+        </picture>
+        <button class="header__button header__button--mobile button">
+            <a class="button__link" href="#">Подобрать программу</a>
+        </button>
+        </div>
+    </section>
     <script>
-        document.querySelector('.menu__button').addEventListener('click',ev => {
-            console.log('ev.target')
+        const button = document.querySelector('.header__button');
+        const cross = document.getElementById('cross');
+        const menu = document.getElementById('menu');
+        const nav = document.querySelector('.menu');
+        button.addEventListener('click', () => {
+            menu.classList.toggle('header__icon--invisible');
+            cross.classList.toggle('header__icon--invisible');
+            nav.classList.toggle('visually-hidden');
         })
     </script>
 </body>
