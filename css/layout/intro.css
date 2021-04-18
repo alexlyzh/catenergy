@@ -1,0 +1,129 @@
+/* Intro - section */
+
+.intro {
+    min-width: 320px;
+    background-repeat: no-repeat;
+}
+
+.intro__text {
+    text-transform: uppercase;
+}
+
+@media (max-width: 747px) {
+    .intro {
+        background-color: #63a73a;
+        background-image: linear-gradient(to top, #FFFFFF 165px, transparent 165px), url('../../img/intro/intro-back-mobile.png');
+        background-position: center top;
+        text-align: center;
+    }
+
+    .intro__heading {
+        font-size: 36px;
+        line-height: 36px;
+        color: #FFFFFF;
+        padding-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .intro__text {
+        font-size: 14px;
+        line-height: 14px;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+
+    .intro__button {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 7px 44px;
+    }
+}
+
+@media (min-width: 748px) and (max-width: 1260px) {
+    .intro {
+        position: relative;
+        text-align: left;
+    }
+
+    .intro__heading {
+        font-size: 60px;
+        line-height: 60px;
+        color: #000000;
+        padding-top: 60px;
+        margin-left: 80px;
+        margin-bottom: 40px;
+    }
+
+    .intro__text {
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+
+    .intro__img {
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro__button {
+        padding: 14px 26px;
+        margin-top: 30px;
+        margin-left: 80px;
+        font-size: 20px;
+        width: auto;
+    }
+}
+
+@media (min-width: 1260px) {
+    .intro {
+        text-align: left;
+    }
+
+    .intro__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        /*grid-template-areas:*/
+        /*        "head img"*/
+        /*        "txt img"*/
+        /*        "btn img";*/
+    }
+
+    .intro__heading {
+        /*grid-area: head;*/
+        font-size: 60px;
+        line-height: 60px;
+        color: #000000;
+        padding-top: 60px;
+        margin-left: 80px;
+        margin-bottom: 40px;
+    }
+
+    .intro__text {
+        /*grid-area: txt;*/
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+
+    .intro__img {
+        /*grid-area: img;*/
+        grid-row: 1/4;
+        grid-column: 2/3;
+    }
+
+    .intro__button {
+        grid-area: btn;
+        padding: 14px 26px;
+        margin-top: 30px;
+        font-size: 20px;
+        width: auto;
+    }
+}
+
