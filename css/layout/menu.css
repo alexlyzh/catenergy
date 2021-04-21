@@ -73,6 +73,8 @@
     .menu__list {
         font-size: 20px;
         line-height: 30px;
+        column-gap: 40px;
+        justify-content: end;
     }
     .menu__link {
         color: #FFFFFF;

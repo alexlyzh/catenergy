@@ -1,12 +1,23 @@
 /* Intro - section */
 
 .intro {
+    display: flex;
+    position: relative;
     min-width: 320px;
     background-repeat: no-repeat;
 }
 
+.intro__grid {
+    display: grid;
+}
+
 .intro__text {
     text-transform: uppercase;
+}
+
+.intro__button {
+    color: #FFFFFF;
+    background-color: #68B738;
 }
 
 @media (max-width: 747px) {
@@ -36,12 +47,12 @@
         font-size: 14px;
         line-height: 18px;
         padding: 7px 44px;
+        width: 100%;
     }
 }
 
 @media (min-width: 748px) and (max-width: 1260px) {
     .intro {
-        position: relative;
         text-align: left;
     }
 
@@ -49,7 +60,7 @@
         font-size: 60px;
         line-height: 60px;
         color: #000000;
-        padding-top: 60px;
+        padding-top: 40px;
         margin-left: 80px;
         margin-bottom: 40px;
     }
@@ -63,15 +74,13 @@
     }
 
     .intro__img {
-        position: absolute;
-        z-index: -1;
-        left: 50%;
-        transform: translateX(-50%);
+        justify-self: center;
     }
 
     .intro__button {
+        position: absolute;
+        top: 32%;
         padding: 14px 26px;
-        margin-top: 30px;
         margin-left: 80px;
         font-size: 20px;
         width: auto;
@@ -81,49 +90,49 @@
 @media (min-width: 1260px) {
     .intro {
         text-align: left;
+        padding-bottom: 55px;
     }
 
     .intro__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr ;
-        /*grid-template-areas:*/
-        /*        "head img"*/
-        /*        "txt img"*/
-        /*        "btn img";*/
+        grid-template-columns: minmax(495px, 1fr) 1.5fr;
+        grid-template-areas:
+            "head pic"
+            "txt pic"
+            "btn pic";
     }
 
     .intro__heading {
-        /*grid-area: head;*/
+        grid-area: head;
         font-size: 60px;
         line-height: 60px;
         color: #000000;
-        padding-top: 60px;
         margin-left: 80px;
-        margin-bottom: 40px;
+        align-self: end;
     }
 
     .intro__text {
-        /*grid-area: txt;*/
+        grid-area: txt;
         font-size: 20px;
         line-height: 20px;
         color: #000000;
         margin-left: 80px;
-        margin-bottom: 20px;
+        align-self: center;
     }
 
-    .intro__img {
-        /*grid-area: img;*/
-        grid-row: 1/4;
-        grid-column: 2/3;
+    .intro__pic {
+        grid-area: pic;
+        align-self: start;
+        justify-self: start;
     }
 
     .intro__button {
         grid-area: btn;
         padding: 14px 26px;
-        margin-top: 30px;
+        margin-left: 80px;
         font-size: 20px;
         width: auto;
+        align-self: start;
+        justify-self: start;
     }
 }
 

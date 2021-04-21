@@ -16,11 +16,15 @@
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
     cursor: pointer;
-    background-color: #68B738;
     text-decoration: none;
-    width: 100%;
+}
+.button:hover {
+    background-color: #5eaa2f;
+}
+.button:active {
+    outline: 1px #FFFFFF solid;
+    background-color: #f95a01;
 }
 
 *,
@@ -46,13 +50,42 @@
   }
   
 @media (min-width: 748px) {
-.container {
-  max-width: 992px;
-}
+    .container {
+      max-width: 992px;
+    }
 }
 
 @media (min-width: 1260px) {
-.container {
-    max-width: 1340px;
+    .container {
+        max-width: 1340px;
+    }
 }
+
+/* Heading */
+
+@media (max-width: 747px) {
+    .page__heading {
+        margin-bottom: 25px;
+    }
 }
+
+@media (min-width: 1260px) {
+    .page__heading {
+        position: relative;
+        margin-bottom: 80px;
+    }
+    .page__heading::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        background-color: #5eaa2f;
+        background-image: url("../../img/intro/intro-back-desktop.png");
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+}
+

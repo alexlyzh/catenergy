@@ -5,7 +5,9 @@
 /* Layout */
 
 @import url(layout/page.css);
-@import url(layout/head-layout.css);
 @import url(layout/menu.css);
 @import url(layout/header.css);
 @import url(layout/intro.css);
+@import url(layout/main.css);
+@import url(layout/catalog.css);
+@import url(layout/knowhow.css);

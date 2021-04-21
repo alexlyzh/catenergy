@@ -1,6 +1,12 @@
 .header {
     position: relative;
+    z-index: 100;
     display: grid;
+}
+
+.header__logo {
+    justify-self: start;
+    outline-offset: 10px;
 }
 
 @media (max-width: 747px) {
@@ -24,13 +30,19 @@
     .header {
         grid-auto-flow: column;
         align-items: center;
-        margin-top: 24px;
+        padding-top: 24px;
     }
 }
 
 @media (max-width: 1260px) {
     .header {
         background-color: transparent;
+    }
+}
+
+@media (min-width: 1260px) {
+    .header {
+        margin-bottom: 30px;
     }
 }
 
