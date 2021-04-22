@@ -1,0 +1,145 @@
+@import "../variables/variables";
+
+.knowhow__heading {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 70px;
+}
+
+.knowhow__list {
+  display: grid;
+  counter-reset: knowhow;
+}
+
+.knowhow__item {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark-grey;
+}
+
+.knowhow__item::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: $basic-green;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.knowhow__item::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 280px;
+  line-height: 215px;
+  color: $basic-grey;
+}
+
+.knowhow__item--leaf::before {
+  background-image: url("../img/knowhow/icon_leaf.svg");
+}
+.knowhow__item--tub::before {
+  background-image: url("../img/knowhow/icon_tub.svg");
+}
+.knowhow__item--eat::before {
+  background-image: url("../img/knowhow/icon_eat.svg");
+}
+.knowhow__item--alarm::before {
+  background-image: url("../img/knowhow/icon_alarm.svg");
+}
+
+@media (max-width: 747px) {
+  .knowhow {
+    margin-bottom: 40px;
+  }
+
+  .knowhow__heading {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .knowhow__list {
+    grid-auto-rows: minmax(60px, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  .knowhow__item {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .knowhow__item::before {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 748px) and (max-width: 1260px) {
+  .knowhow {
+    max-width: 748px;
+    margin-bottom: 45px;
+  }
+
+  .knowhow__list {
+    grid-template-columns: 250px 250px;
+    grid-template-rows: repeat(2, minmax(240px, 1fr));
+    grid-row-gap: 40px;
+    grid-column-gap: 100px;
+  }
+
+  .knowhow__item {
+    padding-top: 110px;
+  }
+
+  .knowhow__item::before {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .knowhow__item::after {
+    counter-increment: knowhow;
+    content: counter(knowhow);
+  }
+}
+
+@media (min-width: 1260px) {
+  .knowhow {
+    margin-bottom: 10px;
+  }
+
+  .knowhow__list {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-auto-rows: minmax(240px, 1fr);
+    grid-gap: 80px;
+  }
+
+  .knowhow__item {
+    padding-top: 110px;
+  }
+
+  .knowhow__item::before {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .knowhow__item::after {
+    counter-increment: knowhow;
+    content: counter(knowhow);
+  }
+}

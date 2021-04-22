@@ -1,0 +1,114 @@
+@import "../variables/variables";
+
+/* Global */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  font-family: 'Oswald', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: $special-green;
+}
+.button:active {
+  outline: 1px $whiteF solid;
+  background-color: #f95a01;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline-color: $basic-green;
+}
+
+
+/* Container ... */
+
+.container {
+  /*border: 1px blueviolet solid;*/
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 748px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+/* ... Container */
+
+
+@media (max-width: 747px) {
+  .page__heading {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .page__heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 69.5%;
+    background-image: linear-gradient(to bottom left, #63a73a, #65a83b);
+  }
+}
+
+@media (min-width: 1260px) {
+  .page__heading {
+    position: relative;
+    margin-bottom: 80px;
+  }
+  .page__heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    background-color: $special-green;
+    background-image: url("../img/intro/intro-back-desktop.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+}
+
