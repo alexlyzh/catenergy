@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.footer__html-text {
+.footer__git-text {
   font-family: Arial, sans-serif;
   text-decoration: none;
   font-size: 16px;
@@ -61,7 +61,7 @@
     height: 18px;
   }
 
-  .footer__html {
+  .footer__git {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +90,7 @@
     height: 23px;
   }
 
-  .footer__html {
+  .footer__git {
     display: grid;
     grid-auto-flow: column;
     align-items: center;

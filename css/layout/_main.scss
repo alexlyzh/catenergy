@@ -1,0 +1,42 @@
+@import "../variables/variables";
+
+.main__heading {
+  position: relative;
+}
+
+@media (max-width: 747px) {
+  .main__heading {
+    margin-bottom: 25px;
+  }
+
+  .main__heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background-image: linear-gradient(to bottom left, #63a73a, #65a83b);
+  }
+}
+
+@media (min-width: 1260px) {
+  .main__heading {
+    padding-top: 90px;
+    margin-bottom: 80px;
+  }
+  .main__heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    background-color: $special-green;
+    background-image: url("../img/intro/intro-back-desktop.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+}

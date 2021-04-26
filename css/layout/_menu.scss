@@ -8,6 +8,7 @@
 .menu__link {
   text-decoration: none;
   outline-offset: 20px;
+  transition: 0.3s;
 }
 
 @media (max-width: 747px) {
@@ -34,7 +35,7 @@
     border-top: 1px solid #E6E6E6;
   }
   .menu__link {
-    color: #000000;
+    color: $black;
   }
   .menu__link:hover {
     color: $basic-green;
@@ -44,6 +45,7 @@
 @media (min-width: 748px) {
   .menu__list {
     grid-auto-flow: column;
+    justify-items: end;
   }
 }
 
@@ -53,7 +55,7 @@
     line-height: 24px;
   }
   .menu__link {
-    color: #000000;
+    color: $black;
     padding-bottom: 10px;
   }
   .menu__link:hover {
@@ -71,6 +73,7 @@
     column-gap: 40px;
     justify-content: end;
   }
+
   .menu__link {
     color: $whiteF;
     padding-bottom: 10px;
@@ -80,5 +83,16 @@
   }
   .menu__link--current {
     border-bottom: 2px solid $whiteF;
+  }
+
+  .menu__link--modified {
+    color: $black;
+  }
+  .menu__list--modified .menu__link--current {
+    border-bottom: 2px solid $basic-green;
+  }
+  .menu__link--modified:hover {
+    transition: 100ms;
+    border-bottom: 2px solid $basic-green;
   }
 }

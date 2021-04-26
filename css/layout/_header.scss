@@ -1,9 +1,25 @@
 @import "../variables/variables";
 
 .header {
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  transition: 0.3s;
+}
+
+.header--shift {
+  background-color: $whiteF;
+  border-bottom: 1px solid $header-bottom;
+}
+
+.header__grid {
   display: grid;
+}
+
+.header--colored {
+  background-color: $whiteF;
 }
 
 .header__logo {
@@ -22,7 +38,7 @@
 }
 
 .header__icon {
-  stroke: #000000;
+  stroke: $black;
   transition: 0.5s;
 }
 
@@ -66,9 +82,14 @@
 
 @media (min-width: 748px) {
   .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $whiteF;
+  }
+
+  .header__grid {
     grid-auto-flow: column;
     align-items: center;
-    padding-top: 24px;
   }
 
   .header__title {
@@ -81,8 +102,10 @@
 }
 
 @media (min-width: 1260px) {
-  .header {
-    margin-bottom: 30px;
+
+  .header--transparent {
+    background: 0 0;
+    background-color: transparent;
   }
 }
 
