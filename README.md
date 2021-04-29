@@ -1,3 +1,3 @@
-# https://www.figma.com/file/lSLfggV7xLX3RiVM6gvQOk/Catenegry
+# https://www.figma.com/file/EyyBzopLNnBib7ezGSkhY2/Cat-energy
 
 # Практика верстки

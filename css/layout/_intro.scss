@@ -1,0 +1,159 @@
+@import "../variables/variables";
+
+/* Intro - section */
+
+.intro {
+  position: relative;
+  min-width: 320px;
+  background-repeat: no-repeat;
+}
+
+.intro__grid {
+  display: grid;
+}
+
+.intro__text {
+  text-transform: uppercase;
+}
+
+.intro__button {
+  text-transform: uppercase;
+  color: $whiteF;
+  background-color: $basic-green;
+}
+.intro__button:hover {
+  background-color: $special-green;
+}
+.intro__button:active {
+  outline: 1px $whiteF solid;
+  background-color: #f95a01;
+}
+
+@media (max-width: 747px) {
+  .intro {
+    background-image: url('../img/intro/intro-back-mobile.png');
+    background-position: 50% 33%;
+    background-size: contain;
+    text-align: center;
+    padding-top: 63px;
+  }
+
+  .intro__heading {
+    font-size: 36px;
+    line-height: 36px;
+    color: $whiteF;
+    padding-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .intro__text {
+    font-size: 14px;
+    line-height: 14px;
+    color: $whiteF;
+    margin-bottom: 30px;
+  }
+
+  .intro__img {
+    width: 100%;
+  }
+
+  .intro__button {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 7px 44px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 748px) {
+  .intro {
+    display: flex;
+  }
+}
+
+@media (min-width: 748px) and (max-width: 1259px) {
+  .intro {
+    text-align: left;
+    padding-top: 80px;
+  }
+
+  .intro__heading {
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+    padding-top: 40px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+  }
+
+  .intro__text {
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+    margin-left: 80px;
+    margin-bottom: 20px;
+  }
+
+  .intro__img {
+    justify-self: center;
+  }
+
+  .intro__button {
+    position: absolute;
+    top: 37.5%;
+    padding: 14px 26px;
+    margin-left: 80px;
+    font-size: 20px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1260px) {
+  .intro {
+    text-align: left;
+    padding-bottom: 55px;
+  }
+
+  .intro__grid {
+    grid-template-columns: minmax(495px, 1fr) 1.5fr;
+    grid-template-areas:
+            "head pic"
+            "txt pic"
+            "btn pic";
+  }
+
+  .intro__heading {
+    grid-area: head;
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+    margin-left: 80px;
+    align-self: end;
+  }
+
+  .intro__text {
+    grid-area: txt;
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+    margin-left: 80px;
+    align-self: center;
+  }
+
+  .intro__pic {
+    grid-area: pic;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .intro__button {
+    grid-area: btn;
+    padding: 14px 26px;
+    margin-left: 80px;
+    font-size: 20px;
+    width: auto;
+    align-self: start;
+    justify-self: start;
+  }
+}
+
