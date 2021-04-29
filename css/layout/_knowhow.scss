@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: 748px) and (max-width: 1260px) {
+@media (min-width: 748px) and (max-width: 1259px) {
   .knowhow {
     max-width: 748px;
     margin-bottom: 45px;
@@ -124,7 +124,7 @@
   .knowhow__list {
     grid-template-columns: repeat(4, minmax(250px, 1fr));
     grid-auto-rows: minmax(240px, 1fr);
-    grid-gap: 80px;
+    grid-gap: 70px;
   }
 
   .knowhow__item {

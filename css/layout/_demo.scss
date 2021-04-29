@@ -1,0 +1,143 @@
+@import "../variables/variables";
+
+.demo__grid {
+  display: grid;
+}
+
+.demo__heading {
+  font-size: 60px;
+  line-height: 60px;
+  color: $black;
+}
+
+.demo__text {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark-grey;
+}
+
+.demo__price {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+@media (max-width: 747px) {
+  .demo {
+    padding: 25px 0;
+    background-color: $demo-grey;
+  }
+
+  .demo__heading {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+
+  .demo__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 25px;
+  }
+  .demo__price {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .demo__slider {
+    text-align: center;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 748px) and (max-width: 1259px){
+  .demo {
+    padding-top: 45px;
+    padding-bottom: 30px;
+    border-top: 1px $special-light-grey solid;
+  }
+  .demo__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    row-gap: 55px;
+  }
+
+  .demo__heading {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .demo__text {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .demo__result {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .demo__price {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-evenly;
+    align-self: stretch;
+  }
+
+  .demo__slider {
+    grid-column: 1/3;
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1260px) {
+  .demo {
+    padding-bottom: 75px;
+  }
+
+  .demo__grid {
+    grid-template-columns: 1fr 1.8fr;
+    grid-template-rows: minmax(195px, 1fr) min-content min-content min-content;
+    align-items: center;
+    row-gap: 55px;
+  }
+
+  .demo__heading {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .demo__text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 10px;
+  }
+
+  .demo__result {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .demo__price {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-content: space-between;
+    width: 330px;
+  }
+
+  .demo__slider {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    justify-self: end;
+  }
+}

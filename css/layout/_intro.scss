@@ -21,6 +21,13 @@
   color: $whiteF;
   background-color: $basic-green;
 }
+.intro__button:hover {
+  background-color: $special-green;
+}
+.intro__button:active {
+  outline: 1px $whiteF solid;
+  background-color: #f95a01;
+}
 
 @media (max-width: 747px) {
   .intro {
@@ -64,7 +71,7 @@
   }
 }
 
-@media (min-width: 748px) and (max-width: 1260px) {
+@media (min-width: 748px) and (max-width: 1259px) {
   .intro {
     text-align: left;
     padding-top: 80px;

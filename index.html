@@ -128,6 +128,55 @@
             <li class="knowhow__item knowhow__item--alarm">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
         </ul>
     </section>
+    <section class="demo">
+        <div class="container">
+            <div class="demo__grid">
+                <h2 class="demo__heading">Живой пример</h2>
+                <p class="demo__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+                <ul class="demo__result result">
+                    <li class="result__item">
+                        <strong class="result__value">5 кг</strong>
+                        <small class="result__description">снижение веса</small>
+                    </li>
+                    <li class="result__item">
+                        <strong class="result__value">60 дней</strong>
+                        <small class="result__description">затрачено времени</small>
+                    </li>
+                </ul>
+                <p class="demo__price">
+                    <span>Затраты на питание:</span>
+                    <span>15 000 руб.</span>
+                </p>
+                <form class="demo__slider slider">
+                    <div class="slider__cats">
+                        <picture class="slider__pic slider__pic-before">
+                            <source type="image/webp" media="(min-width: 748px)" srcset="img/demo/before.webp">
+                            <source media="(min-width: 748px)" srcset="img/demo/before.png">
+                            <source type="image/webp" media="(max-width: 747px)" srcset="img/demo/before-mobile.webp">
+                            <source media="(max-width: 747px)" srcset="img/demo/before-mobile.png">
+                            <img class="slider__img-before" src="img/demo/before.png" alt="Кот до Cat Energy">
+                        </picture>
+                        <picture class="slider__pic slider__pic-after">
+                            <source type="image/webp" media="(min-width: 748px)" srcset="img/demo/after.webp">
+                            <source media="(min-width: 748px)" srcset="img/demo/after.png">
+                            <source type="image/webp" media="(max-width: 747px)" srcset="img/demo/after-mobile.webp">
+                            <source media="(max-width: 747px)" srcset="img/demo/after-mobile.png">
+                            <img class="slider__img-after" src="img/demo/after.png" alt="Кот после Cat Energy">
+                        </picture>
+                    </div>
+                    <fieldset class="slider__scale">
+                        <label for="fat-cat-slim" class="visually-hidden">Результат: до и после</label>
+                        <input class="slider__input visually-hidden" id="fat-cat-slim" type="range" value="50">
+                        <button class="slider__button button" aria-controls="fat-cat-slim">БЫЛО</button>
+                        <div class="slider__line">
+                            <div class="slider__pin" aria-controls="fat-cat-slim"></div>
+                        </div>
+                        <button class="slider__button button" aria-controls="fat-cat-slim">СТАЛО</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
     <section class="contact">
         <div class="container">
             <h2 class="visually-hidden">Наш адрес</h2>

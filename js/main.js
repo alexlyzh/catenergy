@@ -93,8 +93,8 @@ if (map) {
     function init() {
         const myMap = new ymaps.Map(
             `map`, {
-                center: mapCenter,
-                zoom: mapZoom,
+                center: [59.938818, 30.323139],
+                zoom: 17,
             }, {
                 searchControlProvider: `yandex#search`
             }
@@ -102,7 +102,7 @@ if (map) {
 
         myMap.behaviors.disable('scrollZoom');
 
-        var myPlacemark = new ymaps.Placemark(mapCenter, {
+        let myPlacemark = new ymaps.Placemark([59.938818, 30.323139], {
             hintContent: 'Cat Energy',
         }, {
             iconLayout: 'default#image',
