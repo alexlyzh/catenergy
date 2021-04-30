@@ -844,6 +844,9 @@ button {
   background-color: transparent;
   border-color: transparent; }
 
+.slider__button::selection {
+  background-color: transparent; }
+
 .slider__line {
   position: relative;
   background-color: #DCDCDC;

@@ -166,12 +166,12 @@
                     </div>
                     <fieldset class="slider__scale">
                         <label for="fat-cat-slim" class="visually-hidden">Результат: до и после</label>
-                        <input class="slider__input visually-hidden" id="fat-cat-slim" type="range" value="50">
-                        <button class="slider__button button" aria-controls="fat-cat-slim">БЫЛО</button>
+                        <input class="visually-hidden" id="fat-cat-slim" type="range" min="0" max="100" value="50">
+                        <button class="slider__button button" id="before-btn" aria-controls="fat-cat-slim">БЫЛО</button>
                         <div class="slider__line">
                             <div class="slider__pin" aria-controls="fat-cat-slim"></div>
                         </div>
-                        <button class="slider__button button" aria-controls="fat-cat-slim">СТАЛО</button>
+                        <button class="slider__button button" id="after-btn" aria-controls="fat-cat-slim">СТАЛО</button>
                     </fieldset>
                 </form>
             </div>
@@ -224,6 +224,8 @@
     </div>
 </footer>
 <script src="js/svg4everybody.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/header.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/ymap.js"></script>
 </body>
 </html>
