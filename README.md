@@ -1,3 +1,3 @@
 # https://www.figma.com/file/EyyBzopLNnBib7ezGSkhY2/Cat-energy
 
-# Практика верстки
+# Практика верстки и ванильного js

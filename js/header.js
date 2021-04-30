@@ -7,9 +7,6 @@ const nav = document.querySelector('.menu');
 const navList = document.querySelector('.menu__list');
 const navLinks = document.querySelectorAll('.menu__link');
 document.addEventListener('keydown', onEscPress);
-document.addEventListener('click', ev => {
-    console.log(ev.target)
-});
 
 function isScrolled() {
     return document.documentElement.scrollTop > 0;
@@ -82,36 +79,3 @@ const restyleHeader = () => {
 }
 
 window.addEventListener('scroll', restyleHeader)
-
-// Яндекс карта
-const map = document.getElementById(`map`)
-
-if (map) {
-    const mapCenter = [59.938818, 30.323139]
-    const mapZoom = 17
-
-    function init() {
-        const myMap = new ymaps.Map(
-            `map`, {
-                center: [59.938818, 30.323139],
-                zoom: 17,
-            }, {
-                searchControlProvider: `yandex#search`
-            }
-        );
-
-        myMap.behaviors.disable('scrollZoom');
-
-        let myPlacemark = new ymaps.Placemark([59.938818, 30.323139], {
-            hintContent: 'Cat Energy',
-        }, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/map-pin.svg',
-            iconImageSize: [57, 53]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    }
-
-    ymaps.ready(init)
-}
