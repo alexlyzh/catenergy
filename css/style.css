@@ -830,7 +830,12 @@ button {
   overflow: hidden; }
 
 .slider__img-after::selection,
-.slider__img-before::selection {
+.slider__img-before::selection,
+.slider__button::selection,
+.slider__line::selection,
+.slider__pin::selection,
+.slider__scale::selection,
+.slider::selection {
   background-color: transparent; }
 
 .slider__scale {
@@ -848,15 +853,15 @@ button {
   background-color: transparent;
   border-color: transparent; }
 
-.slider__button::selection {
-  background-color: transparent; }
-
 .slider__line {
   position: relative;
   background-color: #DCDCDC;
   border-radius: 6px; }
 
 @media (max-width: 747px) {
+  .demo__slider {
+    width: 320px; }
+
   .slider__cats {
     margin-bottom: 20px; }
 

@@ -1,5 +1,3 @@
-import {debounce} from "./main.js";
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const slider = document.querySelector('.slider')
@@ -10,37 +8,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const beforeBtn = document.getElementById('before-btn')
     const afterBtn = document.getElementById('after-btn')
 
+// Кнопки ДО и ПОСЛЕ
+    function showState(ev) {
+        if (ev.target.getAttribute('id') === 'before-btn') {
+            if (window.innerWidth >=748) {
+                pin.style.left = '100%'
+                input.setAttribute('value', '100')
+                fatCat.style.width = '100%'
+            }
+        } else {
+            pin.style.left = '0'
+            input.setAttribute('value', '0')
+            fatCat.style.width = '0%'
+        }
+    }
+
+    beforeBtn.addEventListener('click', showState)
+    afterBtn.addEventListener('click', showState)
 
 // Отслеживаем смещение слайдера мышью
     pin.addEventListener('mousedown', () => {
 
         const movePinHandler = (evMove) => {
-            const getInnerPosition = (el) => {
-                return evMove.clientX - el.getBoundingClientRect().left
-            }
+            if (window.innerWidth >= 748) {
+                const getInnerPosition = (el) => {
+                    return evMove.clientX - el.getBoundingClientRect().left
+                }
 
-            let pinPosition = getInnerPosition(line)
-            let progress = Math.round(pinPosition / line.clientWidth * 100)
+                let pinPosition = getInnerPosition(line)
+                let progress = Math.round(pinPosition / line.clientWidth * 100)
 
-            if (progress < 0) {
-                progress = 0
-            }
-            if (progress > 100) {
-                progress = 100
-            }
+                if (progress < 0) {
+                    progress = 0
+                }
+                if (progress > 100) {
+                    progress = 100
+                }
 
-            pin.style.left = progress + "%"
-            input.setAttribute('value', progress.toString())
+                pin.style.left = progress + "%"
+                input.setAttribute('value', progress.toString())
 
-            let sliderResize = getInnerPosition(slider)
-            let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
-            // if (sliderResize < sliderLimiter) {
-            //     sliderResize = 0
-            // }
-            if (sliderResize > slider.clientWidth - sliderLimiter) {
-                sliderResize = slider.clientWidth - sliderLimiter + 50
+                let sliderResize = getInnerPosition(slider)
+                let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
+                if (sliderResize > slider.clientWidth - sliderLimiter) {
+                    sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пискелей добавлены, чтобы не обрезать тень от кота
+                }
+                fatCat.style.width = sliderResize + "px"
             }
-            fatCat.style.width = sliderResize + "px"
         }
 
         document.addEventListener('mousemove', movePinHandler)
@@ -50,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
 
+// Мобильная версия. При переходе в моб. версию первым делом устанавливаем ширину картинки жирного кота = 100%
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 748) {
+            fatCat.style.width = '100%'
+            pin.style.left = '100%'
+            input.setAttribute('value', '100')
+        }
+    })
 })
 
 

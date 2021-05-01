@@ -1,4 +1,4 @@
-import {debounce} from "./main.js";
+import {debounce, isScrolled} from "./main.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', hideMobileMenu);
 
 // Меняем стили header при скролле
-    function isScrolled() {
-        return document.documentElement.scrollTop > 0;
-    }
+
 
     const restyleHeader = () => {
         if (isScrolled()) {
