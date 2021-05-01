@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Меняем стили header при скролле
 
-
     const restyleHeader = () => {
         if (isScrolled()) {
             header.classList.remove('header--transparent');
@@ -77,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             currentScroll = window.pageYOffset
             const headerHidden = () => header.classList.contains('header--hidden')
-            if (currentScroll > prevScroll && !headerHidden()) {
+            if (currentScroll > prevScroll && !headerHidden() && currentScroll > 50) {
+                // скролл > 50 нужен, чтобы не спешить прятать header в самом верху страницы
                 header.classList.add('header--hidden')
             }
             if (currentScroll < prevScroll && headerHidden()) {
