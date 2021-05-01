@@ -55,7 +55,10 @@ button {
   z-index: 30;
   transition: 0.3s; }
 
-.header--shift {
+.header--hidden {
+  transform: translateY(-100%); }
+
+.header--page-scrolled {
   background-color: #FFFFFF;
   border-bottom: 1px solid #dbdce0; }
 
@@ -826,8 +829,9 @@ button {
   display: block;
   overflow: hidden; }
 
-.slider__pic-before {
-  position: absolute; }
+.slider__img-after::selection,
+.slider__img-before::selection {
+  background-color: transparent; }
 
 .slider__scale {
   position: relative;
@@ -859,6 +863,13 @@ button {
   .slider__pic {
     background-color: #EAEAEA; }
 
+  .slider__pic-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1; }
+
   .slider__button {
     font-size: 16px;
     line-height: 20px; } }
@@ -869,6 +880,7 @@ button {
     margin-bottom: 30px; }
 
   .slider__pic-before {
+    position: absolute;
     top: 0;
     bottom: 0;
     width: 50%; }
