@@ -9,7 +9,11 @@
   transition: 0.3s;
 }
 
-.header--shift {
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+.header--page-scrolled {
   background-color: $whiteF;
   border-bottom: 1px solid $header-bottom;
 }
