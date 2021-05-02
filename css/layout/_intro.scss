@@ -31,11 +31,15 @@
 
 @media (max-width: 747px) {
   .intro {
-    background-image: url('../img/intro/intro-back-mobile.png');
+    background-image: url('../img/intro/intro-back-mobile@1x.jpg');
     background-position: 50% 33%;
     background-size: contain;
     text-align: center;
     padding-top: 63px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/intro/intro-back-mobile@2x.jpg');
+    }
   }
 
   .intro__heading {

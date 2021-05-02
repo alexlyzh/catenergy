@@ -13,7 +13,8 @@
 
 .page {
   font-family: 'Oswald', sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .button,
 button {
@@ -38,8 +39,9 @@ button {
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
-  min-width: 320px;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px; }
 
 @media (min-width: 748px) {
   .container {
@@ -243,9 +245,13 @@ button {
     bottom: 0;
     width: 45%;
     background-color: #5EAA2F;
-    background-image: url("../img/intro/intro-back-desktop.png");
+    background-image: url("../img/intro/intro-back-desktop@1x.jpg");
     background-position: top right;
     background-repeat: no-repeat; } }
+  @media (min-width: 1260px) and (min-resolution: 2dppx) {
+    .main__heading::before {
+      background-image: url("../img/intro/intro-back-desktop@2x.jpg"); } }
+
 /* Intro - section */
 .intro {
   position: relative;
@@ -272,12 +278,16 @@ button {
 
 @media (max-width: 747px) {
   .intro {
-    background-image: url("../img/intro/intro-back-mobile.png");
+    background-image: url("../img/intro/intro-back-mobile@1x.jpg");
     background-position: 50% 33%;
     background-size: contain;
     text-align: center;
-    padding-top: 63px; }
+    padding-top: 63px; } }
+  @media (max-width: 747px) and (min-resolution: 2dppx) {
+    .intro {
+      background-image: url("../img/intro/intro-back-mobile@2x.jpg"); } }
 
+@media (max-width: 747px) {
   .intro__heading {
     font-size: 36px;
     line-height: 36px;
