@@ -93,6 +93,7 @@
   }
 
   .knowhow__list {
+    justify-content: space-evenly;
     grid-template-columns: 250px 250px;
     grid-template-rows: repeat(2, minmax(240px, 1fr));
     grid-row-gap: 40px;

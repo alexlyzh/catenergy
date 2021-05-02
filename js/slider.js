@@ -1,3 +1,5 @@
+import {touchEventChecker} from "./main.js";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const slider = document.querySelector('.slider')
@@ -7,6 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const fatCat = slider.querySelector('.slider__pic-before')
     const beforeBtn = document.getElementById('before-btn')
     const afterBtn = document.getElementById('after-btn')
+    const movePinHandler = (event) => {
+        const evMove = touchEventChecker(event)
+
+        if (window.innerWidth >= 748) {
+            const getInnerPosition = (el) => {
+                return evMove.clientX - el.getBoundingClientRect().left
+            }
+
+            let pinPosition = getInnerPosition(line)
+            let progress = Math.round(pinPosition / line.clientWidth * 100)
+
+            if (progress < 0) {
+                progress = 0
+            }
+            if (progress > 100) {
+                progress = 100
+            }
+
+            pin.style.left = progress + "%"
+            input.setAttribute('value', progress.toString())
+
+            let sliderResize = getInnerPosition(slider)
+            let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
+            if (sliderResize > slider.clientWidth - sliderLimiter) {
+                sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пискелей добавлены, чтобы не обрезать тень от кота
+            }
+            fatCat.style.width = sliderResize + "px"
+        }
+    }
 
 // Кнопки ДО и ПОСЛЕ
     function showState(ev) {
@@ -26,39 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
     beforeBtn.addEventListener('click', showState)
     afterBtn.addEventListener('click', showState)
 
+// Отслеживаем смещение слайдера касанием
+    pin.addEventListener('touchstart', () => {
+        document.addEventListener('touchmove', movePinHandler)
+        document.addEventListener('touchend', () => {
+            document.removeEventListener('touchmove', movePinHandler);
+        });
+    })
+
 // Отслеживаем смещение слайдера мышью
     pin.addEventListener('mousedown', () => {
-
-        const movePinHandler = (evMove) => {
-            if (window.innerWidth >= 748) {
-                const getInnerPosition = (el) => {
-                    return evMove.clientX - el.getBoundingClientRect().left
-                }
-
-                let pinPosition = getInnerPosition(line)
-                let progress = Math.round(pinPosition / line.clientWidth * 100)
-
-                if (progress < 0) {
-                    progress = 0
-                }
-                if (progress > 100) {
-                    progress = 100
-                }
-
-                pin.style.left = progress + "%"
-                input.setAttribute('value', progress.toString())
-
-                let sliderResize = getInnerPosition(slider)
-                let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
-                if (sliderResize > slider.clientWidth - sliderLimiter) {
-                    sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пискелей добавлены, чтобы не обрезать тень от кота
-                }
-                fatCat.style.width = sliderResize + "px"
-            }
-        }
-
         document.addEventListener('mousemove', movePinHandler)
-
         document.addEventListener('mouseup', () => {
             document.removeEventListener('mousemove', movePinHandler);
         });

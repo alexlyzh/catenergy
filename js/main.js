@@ -18,3 +18,11 @@ export function debounce(func, wait, immediate) {
 export function isScrolled() {
     return document.documentElement.scrollTop > 0;
 }
+
+// Чтобы отличить событие мыши от тач-события
+export function touchEventChecker(event) {
+    if (event.changedTouches) {
+        return event.changedTouches[0]
+    }
+        return event
+}
