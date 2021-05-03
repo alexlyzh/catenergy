@@ -19,6 +19,7 @@
   font-family: 'Oswald', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  min-width: 320px;
 }
 
 .button,
@@ -45,13 +46,13 @@ button {
 /* Container ... */
 
 .container {
-  /*border: 1px blueviolet solid;*/
+  //border: 1px blueviolet solid;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 320px;
+  width: 100%;
 }
 
 @media (min-width: 748px) {

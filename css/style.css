@@ -14,7 +14,8 @@
 .page {
   font-family: 'Oswald', sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  min-width: 320px; }
 
 .button,
 button {
@@ -35,13 +36,12 @@ button {
 
 /* Container ... */
 .container {
-  /*border: 1px blueviolet solid;*/
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 320px; }
+  width: 100%; }
 
 @media (min-width: 748px) {
   .container {
@@ -665,9 +665,6 @@ button {
   .knowhow__item::after {
     counter-increment: knowhow;
     content: counter(knowhow); } }
-.demo__grid {
-  display: grid; }
-
 .demo__heading {
   font-size: 60px;
   line-height: 60px;
@@ -690,6 +687,9 @@ button {
     padding: 25px 0;
     background-color: #EAEAEA; }
 
+  .demo__grid {
+    overflow: hidden; }
+
   .demo__heading {
     font-size: 36px;
     line-height: 40px;
@@ -709,6 +709,9 @@ button {
   .demo__slider {
     text-align: center;
     justify-self: center; } }
+@media (min-width: 748px) {
+  .demo__grid {
+    display: grid; } }
 @media (min-width: 748px) and (max-width: 1259px) {
   .demo {
     padding-top: 45px;
@@ -874,9 +877,6 @@ button {
   touch-action: none; }
 
 @media (max-width: 747px) {
-  .demo__slider {
-    width: 320px; }
-
   .slider__cats {
     margin-bottom: 20px; }
 

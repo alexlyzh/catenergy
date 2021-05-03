@@ -1,9 +1,5 @@
 @import "../variables/variables";
 
-.demo__grid {
-  display: grid;
-}
-
 .demo__heading {
   font-size: 60px;
   line-height: 60px;
@@ -30,6 +26,10 @@
     background-color: $demo-grey;
   }
 
+  .demo__grid {
+    overflow: hidden;
+  }
+
   .demo__heading {
     font-size: 36px;
     line-height: 40px;
@@ -51,6 +51,12 @@
   .demo__slider {
     text-align: center;
     justify-self: center;
+  }
+}
+
+@media (min-width: 748px) {
+  .demo__grid {
+    display: grid;
   }
 }
 

@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Прячем/показываем header при скроллах вверх-вниз - тиснуто отсюда: https://frontips.ru/skryvaem-pokazyvaem-header-pri-prokrutke/
     const onScrollHeader = () => {
 
-        const header = document.querySelector('.header')
         let prevScroll = window.pageYOffset
         let currentScroll
 
@@ -79,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentScroll > prevScroll && !headerHidden() && currentScroll > 40) {
                 // скролл > 50 нужен, чтобы не спешить прятать header в самом верху страницы
                 header.classList.add('header--hidden')
+                closeHeaderMenu()
             }
             if (currentScroll < prevScroll && headerHidden()) {
                 header.classList.remove('header--hidden')
