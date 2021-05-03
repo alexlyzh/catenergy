@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let sliderResize = getInnerPosition(slider)
             let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
             if (sliderResize > slider.clientWidth - sliderLimiter) {
-                sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пискелей добавлены, чтобы не обрезать тень от кота
+                sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пикселей добавлены, чтобы не обрезать тень от кота
             }
             fatCat.style.width = sliderResize + "px"
         }

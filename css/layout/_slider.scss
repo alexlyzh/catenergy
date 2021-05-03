@@ -48,6 +48,10 @@
   border-radius: 6px;
 }
 
+.slider__pin {
+  touch-action: none;
+}
+
 @media (max-width: 747px){
   .demo__slider {
     width: 320px;
@@ -86,6 +90,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    display: block;
     width: 50%;
   }
 
@@ -130,12 +135,12 @@
 
 @media (min-width: 748px) and (max-width: 1259px){
   .slider__pic {
-    background-image: linear-gradient(to bottom, #fff, #fff 30%, #f2f2f2 30%, #f2f2f2);
+    background-image: linear-gradient(to bottom, $whiteF, $whiteF 30%, $basic-grey 30%, $basic-grey);
   }
 }
 
 @media (min-width: 1260px){
   .slider__pic {
-    background-image: linear-gradient(to bottom, #fff, #fff 35%, #f2f2f2 35%, #f2f2f2);
+    background-image: linear-gradient(to bottom, $whiteF, $whiteF 35%, $basic-grey 35%, $basic-grey);
   }
 }

@@ -870,6 +870,9 @@ button {
   background-color: #DCDCDC;
   border-radius: 6px; }
 
+.slider__pin {
+  touch-action: none; }
+
 @media (max-width: 747px) {
   .demo__slider {
     width: 320px; }
@@ -900,6 +903,7 @@ button {
     position: absolute;
     top: 0;
     bottom: 0;
+    display: block;
     width: 50%; }
 
   .slider__button {
@@ -938,10 +942,10 @@ button {
     transform: translate(-50%, -50%); } }
 @media (min-width: 748px) and (max-width: 1259px) {
   .slider__pic {
-    background-image: linear-gradient(to bottom, #fff, #fff 30%, #f2f2f2 30%, #f2f2f2); } }
+    background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 30%, #F2F2F2 30%, #F2F2F2); } }
 @media (min-width: 1260px) {
   .slider__pic {
-    background-image: linear-gradient(to bottom, #fff, #fff 35%, #f2f2f2 35%, #f2f2f2); } }
+    background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 35%, #F2F2F2 35%, #F2F2F2); } }
 .contact__address {
   display: grid;
   grid-column-gap: 5px;

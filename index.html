@@ -165,10 +165,10 @@
                     </div>
                     <fieldset class="slider__scale">
                         <label for="fat-cat-slim" class="visually-hidden">Результат: до и после</label>
-                        <input class="visually-hidden" id="fat-cat-slim" type="range" min="0" max="100" value="50">
+                        <input class="visually-hidden" id="fat-cat-slim" type="range" min="0" max="100" value="50" tabindex="-1">
                         <button class="slider__button button" id="before-btn" aria-controls="fat-cat-slim" type="button">БЫЛО</button>
                         <div class="slider__line">
-                            <div class="slider__pin" aria-controls="fat-cat-slim"></div>
+                            <div class="slider__pin" tabindex="0" aria-controls="fat-cat-slim" aria-label="Слайдер"></div>
                         </div>
                         <button class="slider__button button" id="after-btn" aria-controls="fat-cat-slim" type="button">СТАЛО</button>
                     </fieldset>
