@@ -877,18 +877,41 @@ button {
   touch-action: none; }
 
 @media (max-width: 747px) {
+  .slider__line {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    width: 85px;
+    height: 15px;
+    margin: 0 18px; }
+
+  .slider__line--checked {
+    justify-content: flex-end; }
+
+  .slider__pin {
+    background: #68B738;
+    border-radius: 6px;
+    width: 35px;
+    height: 6px;
+    margin: 0 6px; }
+
   .slider__cats {
     margin-bottom: 20px; }
 
   .slider__pic {
     background-color: #EAEAEA; }
 
-  .slider__pic-after {
+  .slider__pic-before {
     position: absolute;
     top: 0;
-    left: 0;
     bottom: 0;
-    z-index: -1; }
+    z-index: 1;
+    display: block; }
+
+  .slider__pic-after {
+    position: relative;
+    z-index: 0; }
 
   .slider__button {
     font-size: 16px;
