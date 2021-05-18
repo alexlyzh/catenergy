@@ -67,6 +67,10 @@ button {
 .header__grid {
   display: grid; }
 
+.head-layout {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .header--colored {
   background-color: #FFFFFF; }
 
@@ -108,7 +112,8 @@ button {
     left: 0;
     right: 0;
     padding-top: 63px;
-    transition: all .5s; }
+    transition: all .5s;
+    }
 
   .header__button {
     z-index: 1;
@@ -883,18 +888,19 @@ button {
     background: #FFFFFF;
     border: 1px solid #CDCDCD;
     width: 85px;
-    height: 15px;
+    height: 14px;
     margin: 0 18px; }
-
-  .slider__line--checked {
-    justify-content: flex-end; }
 
   .slider__pin {
     background: #68B738;
     border-radius: 6px;
     width: 35px;
     height: 6px;
-    margin: 0 6px; }
+    margin: 0 6px;
+    transition: all 500ms; }
+
+  .slider__pin--after {
+    transform: translateX(35px); }
 
   .slider__cats {
     margin-bottom: 20px; }

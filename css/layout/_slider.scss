@@ -59,12 +59,8 @@
     background: $whiteF;
     border: 1px solid $special-grey;
     width: 85px;
-    height: 15px;
+    height: 14px;
     margin: 0 18px;
-  }
-
-  .slider__line--checked {
-    justify-content: flex-end;
   }
 
   .slider__pin {
@@ -73,6 +69,11 @@
     width: 35px;
     height: 6px;
     margin: 0 6px;
+    transition: all 500ms;
+  }
+
+  .slider__pin--after {
+    transform: translateX(35px);
   }
 
   .slider__cats {

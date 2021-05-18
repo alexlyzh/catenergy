@@ -1,4 +1,4 @@
-import {touchEventChecker} from "./main.js";
+import {debounce, touchEventChecker} from "./main.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fatCat = slider.querySelector('.slider__pic-before')
     const beforeBtn = document.getElementById('before-btn')
     const afterBtn = document.getElementById('after-btn')
+
     const movePinHandler = (event) => {
         const evMove = touchEventChecker(event)
 
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let sliderResize = getInnerPosition(slider)
             let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2
             if (sliderResize > slider.clientWidth - sliderLimiter) {
-                sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пикселей добавлены, чтобы не обрезать тень от кота
+                sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пикселей, чтобы не обрезать тень от кота
             }
             fatCat.style.width = sliderResize + "px"
         }
@@ -42,13 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Кнопки ДО и ПОСЛЕ
     function showState(ev) {
         if (ev.target.getAttribute('id') === 'before-btn') {
-            if (window.innerWidth >=748) {
-                pin.style.left = '100%'
-                input.setAttribute('value', '100')
-                fatCat.style.width = '100%'
-            }
+            pin.style.left = '100%'
+            pin.classList.remove('slider__pin--after')
+            input.setAttribute('value', '100')
+            fatCat.style.width = '100%'
         } else {
             pin.style.left = '0'
+            pin.classList.add('slider__pin--after')
             input.setAttribute('value', '0')
             fatCat.style.width = '0%'
         }
@@ -73,14 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
 
-// Мобильная версия. При переходе в моб. версию первым делом устанавливаем ширину картинки жирного кота = 100%
-    window.addEventListener('resize', () => {
-        if (window.innerWidth < 748) {
-            fatCat.style.width = '100%'
-            pin.style.left = '100%'
-            input.setAttribute('value', '100')
-        }
-    })
+// // Мобильная версия. При переходе в моб. версию первым делом включаем слайд жирного кота
+//     const setFatCat = debounce(function () {
+//         if (window.innerWidth < 748) {
+//             fatCat.style.width = '100%'
+//             pin.style.left = '100%'
+//             pin.classList.remove('slider__pin--after')
+//             input.setAttribute('value', '100')
+//         }
+//     }, 600)
+//
+//     window.addEventListener('resize', setFatCat)
 })
 
 
