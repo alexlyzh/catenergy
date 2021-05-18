@@ -18,9 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         fatCat: document.querySelector('.slider__pic-before'),
         beforeBtn: document.querySelector('#before-btn'),
         afterBtn: document.querySelector('#after-btn'),
+        state: {
+
+        },
         /**
-         *
-         * @param event
+         * Отслеживаем движение ползунка и меняем изображения котов "до и после" на десктоп и планшетной версиях сайта
+         * @param event Событие mousemove или touchmove
          */
         movePinHandler(event) {
             const evMove = touchEventChecker(event)
@@ -31,17 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 let pinPosition = getInnerPosition(line)
-                let progress = Math.round(pinPosition / line.clientWidth * 100)
+                let pinProgress = Math.round(pinPosition / line.clientWidth * 100)
 
-                if (progress < 0) {
-                    progress = 0
+                if (pinProgress < 0) {
+                    pinProgress = 0
                 }
-                if (progress > 100) {
-                    progress = 100
+                if (pinProgress > 100) {
+                    pinProgress = 100
                 }
 
-                pin.style.left = progress + "%"
-                input.setAttribute('value', progress.toString())
+                pin.style.left = pinProgress + "%"
+                input.setAttribute('value', pinProgress.toString())
 
                 let sliderResize = getInnerPosition(cSlider)
                 let sliderLimiter = (cSlider.clientWidth - line.clientWidth) / 2
@@ -51,7 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 fatCat.style.width = sliderResize + "px"
             }
         },
-        showState(ev) { // Кнопки ДО и ПОСЛЕ
+        /**
+         * Кнопки ДО и ПОСЛЕ
+         * @param ev Событие click
+         */
+        showState(ev) {
             if (ev.target.getAttribute('id') === 'before-btn') {
                 pin.style.left = '100%'
                 pin.classList.remove('slider__pin--after')

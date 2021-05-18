@@ -56,8 +56,6 @@ button {
   right: 0;
   z-index: 30;
   transition: 0.3s;
-  padding-left: 20px;
-  padding-right: 20px;
   min-width: 320px; }
 
 .header--hidden {
@@ -102,8 +100,7 @@ button {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FFFFFF;
-    padding-top: 12px;
-    padding-bottom: 12px; }
+    padding: 12px 20px; }
 
   .header__menu {
     position: absolute;
@@ -122,8 +119,7 @@ button {
     outline-offset: 20px; } }
 @media (min-width: 748px) {
   .header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 20px;
     background-color: #FFFFFF; }
 
   .header__grid {
@@ -146,7 +142,7 @@ button {
 .menu__link {
   text-decoration: none;
   outline-offset: 20px;
-  transition: 0.3s; }
+  transition: 100ms; }
 
 @media (max-width: 747px) {
   .menu {
