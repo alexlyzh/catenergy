@@ -60,17 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Отслеживаем смещение слайдера касанием
     pin.addEventListener('touchstart', () => {
-        document.addEventListener('touchmove', movePinHandler)
-        document.addEventListener('touchend', () => {
-            document.removeEventListener('touchmove', movePinHandler);
+        pin.addEventListener('touchmove', movePinHandler)
+        pin.addEventListener('touchend', () => {
+            pin.removeEventListener('touchmove', movePinHandler);
         });
     })
 
 // Отслеживаем смещение слайдера мышью
     pin.addEventListener('mousedown', () => {
-        document.addEventListener('mousemove', movePinHandler)
-        document.addEventListener('mouseup', () => {
-            document.removeEventListener('mousemove', movePinHandler);
+        pin.addEventListener('mousemove', movePinHandler)
+        pin.addEventListener('mouseup', () => {
+            pin.removeEventListener('mousemove', movePinHandler);
         });
     })
 

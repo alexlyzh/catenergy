@@ -55,7 +55,10 @@ button {
   left: 0;
   right: 0;
   z-index: 30;
-  transition: 0.3s; }
+  transition: 0.3s;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 320px; }
 
 .header--hidden {
   transform: translateY(-100%); }
@@ -66,10 +69,6 @@ button {
 
 .header__grid {
   display: grid; }
-
-.head-layout {
-  padding-left: 20px;
-  padding-right: 20px; }
 
 .header--colored {
   background-color: #FFFFFF; }
@@ -112,8 +111,7 @@ button {
     left: 0;
     right: 0;
     padding-top: 63px;
-    transition: all .5s;
-    }
+    transition: all .5s; }
 
   .header__button {
     z-index: 1;
