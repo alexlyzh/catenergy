@@ -897,10 +897,12 @@ button {
     transform: translateX(35px); }
 
   .slider__cats {
+    width: 320px;
     margin-bottom: 20px; }
 
   .slider__pic {
-    background-color: #EAEAEA; }
+    background-color: #EAEAEA;
+    display: inline-block; }
 
   .slider__pic-before {
     position: absolute;
@@ -912,6 +914,10 @@ button {
   .slider__pic-after {
     position: relative;
     z-index: 0; }
+
+  .scroll__img {
+    width: 320px;
+    scroll-snap-align: start; }
 
   .slider__button {
     font-size: 16px;

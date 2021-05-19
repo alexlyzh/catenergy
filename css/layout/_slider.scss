@@ -77,15 +77,20 @@
   }
 
   .slider__cats {
+    width: 320px;
     margin-bottom: 20px;
+    //scroll-snap-type: x mandatory;
+    //white-space: nowrap;
+    //overflow-x: auto;
+    //overflow-y: hidden;
   }
 
   .slider__pic {
     background-color: $demo-grey;
+    display: inline-block;
   }
 
   .slider__pic-before {
-    //display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -96,6 +101,11 @@
   .slider__pic-after {
     position: relative;
     z-index: 0;
+  }
+
+  .scroll__img {
+    width: 320px;
+    scroll-snap-align: start;
   }
 
   .slider__button {
