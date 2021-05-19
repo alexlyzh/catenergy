@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('fat-cat-slim')
     const line = slider.querySelector('.slider__line')
     const pin = slider.querySelector('.slider__pin')
+    const catsContainer = slider.querySelector('.slider__cats')
     const fatCat = slider.querySelector('.slider__pic-before')
     const beforeBtn = document.getElementById('before-btn')
     const afterBtn = document.getElementById('after-btn')
@@ -45,25 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
         pin.classList.remove('slider__pin--after')
         input.setAttribute('value', '100')
         fatCat.style.width = '100%'
+        slider.dataset.state = '0'
     }
     function showAfter() {
         pin.style.left = '0'
         pin.classList.add('slider__pin--after')
         input.setAttribute('value', '0')
         fatCat.style.width = '0%'
+        slider.dataset.state = '1'
     }
 
     /**
-     * Перелистываем котов ДО и ПОСЛЕ в мобильной версии
-     * @param event Событие тач или мыши
+     * Переключаем котов ДО и ПОСЛЕ в зависимости от data-state формы слайдера
      */
-    function slideMobileCats(event) {
-        const moveEvent = touchEventChecker(event)
-        let startCoordinateX = moveEvent.clientX
+    function toggleCats() {
+        if (window.innerWidth < 748) {
+            if (slider.dataset.state === '0') {
+                showAfter()
+                return
+            }
+            if (slider.dataset.state === '1') {
+                showBefore()
+            }
+        }
     }
-    document.addEventListener('touchstart', ()=>{
-        document.addEventListener('touchmove', slideMobileCats)
-    })
+    catsContainer.addEventListener('touchstart', toggleCats)
+    catsContainer.addEventListener('mousedown', toggleCats)
 // Кнопки ДО и ПОСЛЕ
     function showState(ev) {
         if (ev.target.getAttribute('id') === 'before-btn') {

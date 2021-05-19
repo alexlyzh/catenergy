@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentScroll = window.pageYOffset
             const headerHidden = () => header.classList.contains('header--hidden')
             if (currentScroll > prevScroll && !headerHidden() && currentScroll > 40) {
-                // скролл > 50 нужен, чтобы не спешить прятать header в самом верху страницы
+                // скролл > 40 нужен, чтобы не спешить прятать header в самом верху страницы
                 header.classList.add('header--hidden')
                 closeHeaderMenu()
             }

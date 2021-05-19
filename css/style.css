@@ -876,6 +876,9 @@ button {
   touch-action: none; }
 
 @media (max-width: 747px) {
+  .slider__cats {
+    touch-action: none; }
+
   .slider__line {
     display: flex;
     align-items: center;
