@@ -902,7 +902,7 @@ button {
 
   .slider__pic {
     background-color: #EAEAEA;
-    display: inline-block; }
+    transition: all 500ms ease 0s; }
 
   .slider__pic-before {
     position: absolute;

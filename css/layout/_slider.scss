@@ -79,15 +79,11 @@
   .slider__cats {
     width: 320px;
     margin-bottom: 20px;
-    //scroll-snap-type: x mandatory;
-    //white-space: nowrap;
-    //overflow-x: auto;
-    //overflow-y: hidden;
   }
 
   .slider__pic {
     background-color: $demo-grey;
-    display: inline-block;
+    transition: all 500ms ease 0s;
   }
 
   .slider__pic-before {

@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const afterBtn = document.getElementById('after-btn')
 
     const movePinHandler = (event) => {
-        const evMove = touchEventChecker(event)
+        const moveEvent = touchEventChecker(event)
 
         if (window.innerWidth >= 748) {
             const getInnerPosition = (el) => {
-                return evMove.clientX - el.getBoundingClientRect().left
+                return moveEvent.clientX - el.getBoundingClientRect().left
             }
 
             let pinPosition = getInnerPosition(line)
@@ -40,18 +40,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function showBefore() {
+        pin.style.left = '100%'
+        pin.classList.remove('slider__pin--after')
+        input.setAttribute('value', '100')
+        fatCat.style.width = '100%'
+    }
+    function showAfter() {
+        pin.style.left = '0'
+        pin.classList.add('slider__pin--after')
+        input.setAttribute('value', '0')
+        fatCat.style.width = '0%'
+    }
+
+    /**
+     * Перелистываем котов ДО и ПОСЛЕ в мобильной версии
+     * @param event Событие тач или мыши
+     */
+    function slideMobileCats(event) {
+        const moveEvent = touchEventChecker(event)
+        let startCoordinateX = moveEvent.clientX
+    }
+    document.addEventListener('touchstart', ()=>{
+        document.addEventListener('touchmove', slideMobileCats)
+    })
 // Кнопки ДО и ПОСЛЕ
     function showState(ev) {
         if (ev.target.getAttribute('id') === 'before-btn') {
-            pin.style.left = '100%'
-            pin.classList.remove('slider__pin--after')
-            input.setAttribute('value', '100')
-            fatCat.style.width = '100%'
+            showBefore()
         } else {
-            pin.style.left = '0'
-            pin.classList.add('slider__pin--after')
-            input.setAttribute('value', '0')
-            fatCat.style.width = '0%'
+            showAfter()
         }
     }
 
@@ -75,16 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 // // Мобильная версия. При переходе в моб. версию первым делом включаем слайд жирного кота
-//     const setFatCat = debounce(function () {
-//         if (window.innerWidth < 748) {
-//             fatCat.style.width = '100%'
-//             pin.style.left = '100%'
-//             pin.classList.remove('slider__pin--after')
-//             input.setAttribute('value', '100')
-//         }
-//     }, 600)
-//
-//     window.addEventListener('resize', setFatCat)
+    const setFatCat = debounce(function () {
+        if (window.innerWidth < 748) {
+            showBefore()
+        }
+    }, 600)
+
+    window.addEventListener('resize', setFatCat)
 })
 
 
