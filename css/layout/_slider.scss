@@ -99,7 +99,6 @@
   }
 
   .slider__pic-after {
-    position: relative;
     z-index: 0;
   }
 
@@ -119,6 +118,15 @@
     width: 690px;
     height: 517px;
     margin-bottom: 30px;
+  }
+
+  .slider__pic {
+    width: 690px;
+    height: 517px;
+  }
+
+  .slider__img {
+    position: relative;
   }
 
   .slider__pic-before {
@@ -170,12 +178,12 @@
 
 @media (min-width: 748px) and (max-width: 1259px){
   .slider__pic {
-    background-image: linear-gradient(to bottom, $whiteF, $whiteF 30%, $basic-grey 30%, $basic-grey);
+    background-image: linear-gradient(to bottom, $whiteF, $whiteF $tablet-gradient-brp, $demo-grey $tablet-gradient-brp, $demo-grey);
   }
 }
 
 @media (min-width: 1260px){
   .slider__pic {
-    background-image: linear-gradient(to bottom, $whiteF, $whiteF 35%, $basic-grey 35%, $basic-grey);
+    background-image: linear-gradient(to bottom, $whiteF, $whiteF $desktop-gradient-brp, $basic-grey $desktop-gradient-brp, $basic-grey);
   }
 }
