@@ -60,10 +60,9 @@
   }
 }
 
-@media (min-width: 748px) and (max-width: 1259px){
-
-}
 
 @media (min-width: 1260px) {
-
+  .result__description {
+    background-color: $basic-grey;
+  }
 }

@@ -856,6 +856,9 @@ button {
     background-color: #FFFFFF;
     padding: 0 8px;
     transform: translateY(6px); } }
+@media (min-width: 1260px) {
+  .result__description {
+    background-color: #F2F2F2; } }
 .slider {
   display: flex;
   flex-direction: column;
