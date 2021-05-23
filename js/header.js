@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('header__icon--invisible');
         cross.classList.toggle('header__icon--invisible');
         nav.classList.toggle('menu--closed');
-    })
+    });
 
 
 // Закрываем меню-бургер при переключении в режимы планшета или десктопа
@@ -43,52 +43,64 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', hideMobileMenu);
 
 // Меняем стили header при скролле
+    const setHeaderTransparency = method => {
+        header.classList[method]('header--transparent');
+    }
 
     const restyleHeader = () => {
-        if (isScrolled()) {
-            header.classList.remove('header--transparent');
-            header.classList.add('header--page-scrolled');
-            navList.classList.add('menu__list--modified');
-            navLinks.forEach(el => {
-                el.classList.add('menu__link--modified');
-            });
-        }
-        if (!isScrolled()) {
-            header.classList.add('header--transparent');
-            header.classList.remove('header--page-scrolled');
-            navList.classList.remove('menu__list--modified');
-            navLinks.forEach(el => {
-                el.classList.remove('menu__link--modified');
-            });
-        }
-    }
-    restyleHeader()
+        const page = document.querySelector('.page');
+            if (isScrolled()) {
+                if (page.dataset.page === 'index') {
+                    setHeaderTransparency('remove');
+                    navList.classList.add('menu__list--modified');
+                    navLinks.forEach(el => {
+                        el.classList.add('menu__link--modified');
+                    });
+                }
+                header.classList.add('header--page-scrolled');
 
-    window.addEventListener('scroll', restyleHeader)
+            }
+            if (!isScrolled()) {
+                if (page.dataset.page === 'index') {
+                    setHeaderTransparency('add');
+                    navList.classList.remove('menu__list--modified');
+                    navLinks.forEach(el => {
+                        el.classList.remove('menu__link--modified');
+                    });
+                }
+                header.classList.remove('header--page-scrolled');
+            }
+    }
+    restyleHeader();
+
+    window.addEventListener('scroll', restyleHeader);
 
 // Прячем/показываем header при скроллах вверх-вниз - тиснуто отсюда: https://frontips.ru/skryvaem-pokazyvaem-header-pri-prokrutke/
     const onScrollHeader = () => {
 
-        let prevScroll = window.pageYOffset
-        let currentScroll
+        let prevScroll = window.pageYOffset;
+        let currentScroll;
 
         window.addEventListener('scroll', () => {
-            currentScroll = window.pageYOffset
-            const headerHidden = () => header.classList.contains('header--hidden')
-            if (currentScroll > prevScroll && !headerHidden() && currentScroll > 40) {
-                // скролл > 40 нужен, чтобы не спешить прятать header в самом верху страницы
-                header.classList.add('header--hidden')
-                closeHeaderMenu()
+            currentScroll = window.pageYOffset;
+            const isHeaderHidden = () => header.classList.contains('header--hidden');
+            if (currentScroll > prevScroll && !isHeaderHidden() && currentScroll > 80) {
+                // скролл > 80 нужен, чтобы не спешить прятать header в самом верху страницы
+                header.classList.add('header--hidden');
+                closeHeaderMenu();
             }
-            if (currentScroll < prevScroll && headerHidden()) {
-                header.classList.remove('header--hidden')
+            if (currentScroll < prevScroll && isHeaderHidden()) {
+                header.classList.remove('header--hidden');
             }
-            prevScroll = currentScroll
+            if (currentScroll < prevScroll && !menu.classList.contains('menu--closed')) {
+                closeHeaderMenu();
+            }
+            prevScroll = currentScroll;
         })
     }
 
-    onScrollHeader()
+    onScrollHeader();
 
-})
+});
 
 

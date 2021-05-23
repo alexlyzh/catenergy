@@ -1,7 +1,5 @@
 @import "../variables/variables";
 
-/* Intro - section */
-
 .intro {
   position: relative;
   min-width: 320px;
@@ -43,11 +41,9 @@
   }
 
   .intro__heading {
-    font-size: 36px;
-    line-height: 36px;
     color: $whiteF;
     padding-top: 25px;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
 
   .intro__text {
@@ -69,25 +65,17 @@
   }
 }
 
-@media (min-width: 748px) {
-  .intro {
-    display: flex;
-  }
-}
-
 @media (min-width: 748px) and (max-width: 1259px) {
   .intro {
     text-align: left;
     padding-top: 80px;
   }
 
-  .intro__heading {
-    font-size: 60px;
-    line-height: 60px;
+  .intro__heading {;
     color: $black;
     padding-top: 40px;
+    padding-bottom: 40px;
     margin-left: 80px;
-    margin-bottom: 40px;
   }
 
   .intro__text {

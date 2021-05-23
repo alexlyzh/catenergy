@@ -2,9 +2,6 @@
 const ymap = document.getElementById(`map`)
 
 if (ymap) {
-    const mapCenter = [59.938818, 30.323139]
-    const mapZoom = 17
-
     function init() {
         const myMap = new ymaps.Map(
             `map`, {

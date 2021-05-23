@@ -1,15 +1,15 @@
 @import "../variables/variables";
 
-.main__heading {
+.index__heading {
   position: relative;
 }
 
 @media (max-width: 747px) {
-  .main__heading {
+  .index__heading {
     margin-bottom: 25px;
   }
 
-  .main__heading::before {
+  .index__heading::before {
     content: "";
     position: absolute;
     display: block;
@@ -22,11 +22,11 @@
 }
 
 @media (min-width: 1260px) {
-  .main__heading {
+  .index__heading {
     padding-top: 90px;
     margin-bottom: 80px;
   }
-  .main__heading::before {
+  .index__heading::before {
     content: "";
     position: absolute;
     display: block;
@@ -44,6 +44,4 @@
       background-size: contain;
     }
   }
-
-
 }

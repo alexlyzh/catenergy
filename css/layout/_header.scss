@@ -10,6 +10,11 @@
   min-width: 320px;
 }
 
+.header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .header--hidden {
   transform: translateY(-100%);
 }
@@ -105,10 +110,8 @@
 }
 
 @media (min-width: 1260px) {
-
   .header--transparent {
-    background: 0 0;
-    background-color: transparent;
+    background: transparent 0 0;
   }
 }
 

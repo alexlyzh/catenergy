@@ -163,6 +163,7 @@
 
 @media (min-width: 1260px) {
   .catalog {
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
     grid-column-gap: 80px;
     margin-bottom: 70px;

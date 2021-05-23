@@ -22,7 +22,7 @@ export function isScrolled() {
 // Чтобы отличить событие мыши от тач-события
 export function touchEventChecker(event) {
     if (event.changedTouches) {
-        return event.changedTouches[0]
+        return event.changedTouches[0];
     }
-        return event
+        return event;
 }

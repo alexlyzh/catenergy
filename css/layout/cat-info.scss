@@ -1,0 +1,105 @@
+@import "../variables/variables";
+
+.cat-info__text {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: 65px;
+}
+
+.cat-info__legend {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: -40px;
+  background-color: $whiteF;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+  margin-bottom: 70px;
+}
+
+.cat-info__legend::after {
+  position: absolute;
+  content: '';
+  left: -7000px;
+  right: -7000px;
+  top: 30%;
+  z-index: -1;
+  height: 2px;
+  background-color: $basic-green;
+}
+
+.cat-info__label {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.cat-info__input {
+  height: 45px;
+  padding: 5px 20px 0;;
+  margin-left: 10px;
+  border: 1px solid $input-border;
+}
+
+.cat-info__input:active,
+.cat-info__input:focus {
+  outline: none;
+  border: 2px solid $dark-grey;
+}
+
+.cat-info__input:hover {
+  border: 1px solid $special-grey;
+}
+
+.cat-info__input,
+.cat-info__input::placeholder {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+@media (max-width: 747px) {
+  .cat-info__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  .cat-info__legend {
+    font-size: 24px;
+    line-height: 26px;
+    color: $black;
+    margin-bottom: 35px;
+  }
+
+  .cat-info__label {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .cat-info__input,
+  .cat-info__input::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 748px) {
+  .cat-info__input {
+    height: 50px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .cat-info__input {
+    margin-left: 20px;
+  }
+}
