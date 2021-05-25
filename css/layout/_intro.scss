@@ -14,19 +14,6 @@
   text-transform: uppercase;
 }
 
-.intro__button {
-  text-transform: uppercase;
-  color: $whiteF;
-  background-color: $basic-green;
-}
-.intro__button:hover {
-  background-color: $special-green;
-}
-.intro__button:active {
-  outline: 1px $whiteF solid;
-  background-color: #f95a01;
-}
-
 @media (max-width: 747px) {
   .intro {
     background-image: url('../img/intro/intro-back-mobile@1x.jpg');
@@ -59,7 +46,6 @@
 
   .intro__button {
     font-size: 14px;
-    line-height: 18px;
     padding: 7px 44px;
     width: 100%;
   }
@@ -93,7 +79,8 @@
   .intro__button {
     position: absolute;
     top: 37.5%;
-    padding: 14px 26px;
+    height: 50px;
+    padding: 15px 25px;
     margin-left: 80px;
     font-size: 20px;
     width: auto;
@@ -140,6 +127,7 @@
 
   .intro__button {
     grid-area: btn;
+    height: 50px;
     padding: 14px 26px;
     margin-left: 80px;
     font-size: 20px;

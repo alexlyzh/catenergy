@@ -1,0 +1,44 @@
+@import "../variables/variables";
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.input {
+  height: 45px;
+  padding: 5px 20px 0;
+  border: 1px solid $input-border;
+}
+
+.input:active,
+.input:focus {
+  outline: none;
+  border: 2px solid $dark-grey;
+}
+
+.input:hover {
+  border: 1px solid $special-grey;
+}
+
+.input--invalid:invalid {
+  border: 2px solid $status_error;
+}
+
+.input,
+.input::placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+@media (max-width: 747px) {
+  .input,
+  .input::placeholder {
+    font-size: 16px;
+    padding-top: 0;
+  }
+}
+

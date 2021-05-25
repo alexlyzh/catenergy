@@ -26,16 +26,6 @@
   font-family: 'Oswald', sans-serif;
 }
 
-.button,
-button {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 *,
 ::before,
 ::after {
@@ -67,7 +57,7 @@ button {
 
 @media (min-width: 1260px) {
   .container {
-    max-width: 1800px;
+    max-width: 1600px;
   }
 }
 

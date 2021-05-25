@@ -40,27 +40,7 @@
 }
 
 .cat-info__input {
-  height: 45px;
-  padding: 5px 20px 0;;
   margin-left: 10px;
-  border: 1px solid $input-border;
-}
-
-.cat-info__input:active,
-.cat-info__input:focus {
-  outline: none;
-  border: 2px solid $dark-grey;
-}
-
-.cat-info__input:hover {
-  border: 1px solid $special-grey;
-}
-
-.cat-info__input,
-.cat-info__input::placeholder {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: $dark-grey;
 }
 
 @media (max-width: 747px) {
@@ -80,12 +60,6 @@
   }
 
   .cat-info__label {
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  .cat-info__input,
-  .cat-info__input::placeholder {
     font-size: 16px;
     line-height: 18px;
   }

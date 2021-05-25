@@ -1,6 +1,12 @@
+// General
 @import "layout/page";
+@import "layout/button";
+@import "layout/input";
 @import "layout/header";
 @import "layout/menu";
+@import "layout/footer";
+
+// index.html
 @import "layout/index";
 @import "layout/intro";
 @import "layout/catalog";
@@ -9,7 +15,8 @@
 @import "layout/result";
 @import "layout/slider";
 @import "layout/contact";
-@import "layout/footer";
+
+// program.html
 @import "layout/program";
 @import "layout/cat-info";
 

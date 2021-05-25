@@ -1,0 +1,35 @@
+@import "../variables/variables";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  padding: 20px 40px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $dark-grey;
+  background-color: $basic-grey;
+}
+
+.button:hover {
+  background-color: $button-back;
+}
+
+.button:active .button__text {
+  opacity: 0.3;
+}
+
+.button--colored {
+  color: $whiteF;
+  background-color: $basic-green;
+}
+
+.button--colored:hover {
+  background-color: $special-green;
+}
