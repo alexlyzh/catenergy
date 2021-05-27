@@ -20,15 +20,16 @@
   margin-bottom: 70px;
 }
 
-.cat-info__legend::after {
+.cat-info__legend::after,
+.cat-info__legend::before {
   position: absolute;
   content: '';
-  left: -7000px;
-  right: -7000px;
+  width: 100vw;
   top: 30%;
+  left: 0;
   z-index: -1;
   height: 2px;
-  background-color: $basic-green;
+  background-color: #68B738;
 }
 
 .cat-info__label {

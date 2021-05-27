@@ -82,8 +82,8 @@
   .header__button {
     z-index: 1;
     display: block;
+    padding: 0;
     background-color: transparent;
-    border: 0;
     justify-self: end;
     outline-offset: 20px;
   }

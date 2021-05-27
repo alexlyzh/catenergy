@@ -183,8 +183,8 @@
   .header__button {
     z-index: 1;
     display: block;
+    padding: 0;
     background-color: transparent;
-    border: 0;
     justify-self: end;
     outline-offset: 20px; } }
 @media (min-width: 748px) {
@@ -1225,12 +1225,13 @@
   color: #000000;
   margin-bottom: 70px; }
 
-.cat-info__legend::after {
+.cat-info__legend::after,
+.cat-info__legend::before {
   position: absolute;
   content: '';
-  left: -7000px;
-  right: -7000px;
+  width: 100vw;
   top: 30%;
+  left: 0;
   z-index: -1;
   height: 2px;
   background-color: #68B738; }
