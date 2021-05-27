@@ -1031,10 +1031,9 @@
 .slider__pin {
   touch-action: none; }
 
-.slider__pic--smooth,
 .slider__pin--smooth,
 .slider__img-after--smooth,
-.slider__img-before--smooth {
+.slider__pic-before--smooth {
   transition: all 500ms ease 0s; }
 
 @media (max-width: 747px) {
