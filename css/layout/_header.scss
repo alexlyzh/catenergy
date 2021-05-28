@@ -59,6 +59,7 @@
 @media (max-width: 747px) {
   .header {
     background-color: $whiteF;
+    height: 64px;
   }
 
   .head-layout {
@@ -75,7 +76,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 63px;
+    padding-top: 64px;
     transition: all .5s;
   }
 

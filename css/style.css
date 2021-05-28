@@ -162,7 +162,8 @@
 
 @media (max-width: 747px) {
   .header {
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    height: 64px; }
 
   .head-layout {
     z-index: 1;
@@ -177,7 +178,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 63px;
+    padding-top: 64px;
     transition: all .5s; }
 
   .header__button {
