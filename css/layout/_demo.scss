@@ -78,6 +78,17 @@
     border-top: 1px $special-light-grey solid;
   }
 
+  .demo::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 494px;
+    background-color: $demo-grey;
+  }
+
   .demo__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -118,11 +129,22 @@
 }
 
 @media (min-width: 1260px) {
+  .demo::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 469px;
+    background-color: $basic-grey;
+  }
+
   .demo__grid {
     grid-template-columns: 1fr 1.8fr;
     grid-template-rows: 155px min-content min-content min-content;
     align-items: center;
-    row-gap: 55px;
+    row-gap: 45px;
   }
 
   .demo__heading {
@@ -133,7 +155,8 @@
   .demo__text {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 10px 0;
+    padding-top: 20px;
+    min-width: 450px;
   }
 
   .demo__result {
@@ -153,32 +176,5 @@
     grid-column: 2/3;
     grid-row: 1/5;
     justify-self: end;
-  }
-}
-
-@media (min-width: 748px) and (max-width: 1259px){
-  .demo::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 494px;
-    background-color: $demo-grey;
-  }
-}
-
-@media (min-width: 1260px){
-
-  .demo::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 469px;
-    background-color: $basic-grey;
   }
 }

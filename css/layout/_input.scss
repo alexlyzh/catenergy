@@ -18,9 +18,9 @@
   border: 2px solid $dark-grey;
 }
 
-.input:hover {
-  border: 1px solid $special-grey;
-}
+//.input:hover {
+//  border: 1px solid $special-grey;
+//}
 
 .input--invalid:invalid {
   border: 2px solid $status_error;
