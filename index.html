@@ -57,7 +57,7 @@
                     <use xlink:href="#logo-txt-mob"></use>
                 </svg>
             </a>
-            <button class="header__button" aria-label="Меню" aria-controls="menu__list">
+            <button class="header__button button" aria-label="Меню" aria-controls="menu__list">
                 <svg class="header__icon header__icon--invisible" id="cross" aria-hidden="true" width="24" height="18" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke-width="1.5"/>
                     <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke-width="1.5"/>
@@ -150,7 +150,7 @@
                 </p>
                 <form class="demo__slider slider" data-state="0">
                     <div class="slider__cats">
-                        <picture class="slider__pic slider__pic-before">
+                        <picture class="slider__pic slider__pic-before slider__pic-before--smooth">
                             <source type="image/webp" media="(min-width: 748px)" srcset="img/demo/before@1x.webp, img/demo/before@2x.webp 2x">
                             <source type="image/webp" media="(max-width: 747px)" srcset="img/demo/before-mobile@1x.webp, img/demo/before-mobile@2x.webp 2x">
                             <source media="(min-width: 748px)" srcset="img/demo/before@1x.png, img/demo/before@2x.png 2x">
@@ -162,7 +162,7 @@
                             <source type="image/webp" media="(max-width: 747px)" srcset="img/demo/after-mobile@1x.webp, img/demo/after-mobile@2x.webp 2x">
                             <source media="(min-width: 748px)" srcset="img/demo/after@1x.png, img/demo/after@2x.png 2x">
                             <source media="(max-width: 747px)" srcset="img/demo/after-mobile@1x.png, img/demo/after-mobile@2x.png 2x">
-                            <img class="slider__img-after" src="img/demo/after@1x.png" alt="Кот после Cat Energy">
+                            <img class="slider__img-after slider__img-after--smooth" src="img/demo/after@1x.png" alt="Кот после Cat Energy">
                         </picture>
                     </div>
                     <fieldset class="slider__scale">
@@ -170,7 +170,7 @@
                         <input class="visually-hidden" id="fat-cat-slim" type="range" min="0" max="100" value="50" tabindex="-1">
                         <button class="slider__button button" id="before-btn" aria-controls="fat-cat-slim" type="button">БЫЛО</button>
                         <div class="slider__line">
-                            <div class="slider__pin" tabindex="0" aria-controls="fat-cat-slim" aria-label="Слайдер"></div>
+                            <div class="slider__pin slider__pin--smooth" tabindex="0" aria-controls="fat-cat-slim" aria-label="Слайдер"></div>
                         </div>
                         <button class="slider__button button" id="after-btn" aria-controls="fat-cat-slim" type="button">СТАЛО</button>
                     </fieldset>

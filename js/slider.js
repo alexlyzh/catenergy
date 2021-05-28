@@ -4,41 +4,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slider = document.querySelector('.slider');
     if (slider) {
+        const SLIDER_TABLET_WIDTH = 690;
         const input = document.getElementById('fat-cat-slim');
         const line = slider.querySelector('.slider__line');
         const pin = slider.querySelector('.slider__pin');
         const catsContainer = slider.querySelector('.slider__cats');
-        const fatCat = slider.querySelector('.slider__pic-before');
+        const fatCatPic = slider.querySelector('.slider__pic-before');
+        const slimCatImg = slider.querySelector('.slider__img-after');
         const beforeBtn = document.getElementById('before-btn');
         const afterBtn = document.getElementById('after-btn');
 
-        const movePinHandler = (event) => {
-            const moveEvent = touchEventChecker(event);
+        function setSmoothMode(method) {
+            pin.classList[method]('slider__pin--smooth');
+            fatCatPic.classList[method]('slider__pic-before--smooth');
+            slimCatImg.classList[method]('slider__img-after--smooth');
+        }
 
+        function movePinHandler(evt) {
+            setSmoothMode('remove');
+            const moveEvent = touchEventChecker(evt);
             if (window.innerWidth >= 748) {
-                const getInnerPosition = (el) => {
+                /**
+                 * Находим расстояние от курсора до левой границы элемента.
+                 * @param el Элемент
+                 * @returns {number} px
+                 */
+                function getLeftBorderDistance(el) {
                     return moveEvent.clientX - el.getBoundingClientRect().left;
                 }
 
-                let pinPosition = getInnerPosition(line);
-                let progress = Math.round(pinPosition / line.clientWidth * 100);
+                let pinPosition = getLeftBorderDistance(line);
+                let pinProgress = Math.round(pinPosition / line.clientWidth * 100);
 
-                if (progress < 0) {
-                    progress = 0;
+                if (pinProgress < 0) {
+                    pinProgress = 0;
                 }
-                if (progress > 100) {
-                    progress = 100;
+                if (pinProgress > 100) {
+                    pinProgress = 100;
                 }
 
-                pin.style.left = progress + "%";
-                input.setAttribute('value', progress.toString());
+                pin.style.left = pinProgress + '%';
+                input.setAttribute('value', pinProgress.toString());
 
-                let sliderResize = getInnerPosition(slider);
-                let sliderLimiter = (slider.clientWidth - line.clientWidth) / 2;
-                if (sliderResize > slider.clientWidth - sliderLimiter) {
-                    sliderResize = slider.clientWidth - sliderLimiter + 50 // 50 пикселей, чтобы не обрезать тень от кота
-                }
-                fatCat.style.width = sliderResize + "px";
+                fatCatPic.style.width = Math.min(getLeftBorderDistance(slider),SLIDER_TABLET_WIDTH) + 'px';
+                slimCatImg.style.clip = `rect(auto, auto, auto, ${Math.min(getLeftBorderDistance(slider) < 0 ? 0 : getLeftBorderDistance(slider),SLIDER_TABLET_WIDTH)}px)`;
             }
         }
 
@@ -46,14 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
             pin.style.left = '100%';
             pin.classList.remove('slider__pin--after');
             input.setAttribute('value', '100');
-            fatCat.style.width = '100%';
+            fatCatPic.style.width = '100%';
+            slimCatImg.style.clip = `rect(auto, auto, auto, ${SLIDER_TABLET_WIDTH}px)`;
             slider.dataset.state = '0';
         }
         function showAfter() {
             pin.style.left = '0';
             pin.classList.add('slider__pin--after');
             input.setAttribute('value', '0');
-            fatCat.style.width = '0%';
+            fatCatPic.style.width = '0%';
+            slimCatImg.style.clip = `rect(auto, auto, auto, 0px)`;
             slider.dataset.state = '1';
         }
 
@@ -85,11 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
         beforeBtn.addEventListener('click', showState);
         afterBtn.addEventListener('click', showState);
 
+
+
     // Отслеживаем смещение слайдера касанием
         pin.addEventListener('touchstart', () => {
             document.addEventListener('touchmove', movePinHandler);
             document.addEventListener('touchend', () => {
                 document.removeEventListener('touchmove', movePinHandler);
+                setSmoothMode('add');
+                if (input.value < 50) {
+                    showAfter();
+                } else if (input.value > 50) {
+                    showBefore();
+                }
             });
         });
 
@@ -98,6 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('mousemove', movePinHandler);
             document.addEventListener('mouseup', () => {
                 document.removeEventListener('mousemove', movePinHandler);
+                setSmoothMode('add');
+                if (input.value < 50) {
+                    showAfter();
+                } else if (input.value > 50) {
+                    showBefore();
+                }
             });
         });
 
