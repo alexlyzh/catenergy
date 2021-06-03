@@ -3,19 +3,18 @@
 .input-wrapper {
   display: flex;
   align-items: center;
-  justify-content: start;
+  //justify-content: start;
 }
 
 .input {
   height: 45px;
-  padding: 5px 20px 0;
+  padding: 0 20px;
   border: 1px solid $input-border;
 }
 
 .input:active,
 .input:focus {
-  outline: none;
-  border: 2px solid $dark-grey;
+  outline: 2px solid $dark-grey;
 }
 
 //.input:hover {

@@ -8,11 +8,23 @@
   margin-bottom: 65px;
 }
 
-.cat-info__legend {
+.cat-info__outline {
   position: relative;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-left: -40px;
+  margin-bottom: 65px;
+}
+
+.cat-info__outline::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  height: 2px;
+  background-color: $basic-green;
+  left: 0;
+  right: 0;
+  top: 18px;
+}
+
+.cat-info__legend {
   background-color: $whiteF;
   font-size: 36px;
   line-height: 36px;
@@ -20,20 +32,15 @@
   margin-bottom: 70px;
 }
 
-//.cat-info__legend::after,
-//.cat-info__legend::before {
-//  position: absolute;
-//  content: '';
-//  width: 100vw;
-//  top: 30%;
-//  left: 0;
-//  z-index: -1;
-//  height: 2px;
-//  background-color: #68B738;
-//}
-
-.cat-info__contact-wrapper {
+.cat-info__program {
   display: grid;
+}
+
+.cat-info__data,
+.cat-info__contacts {
+  display: grid;
+  row-gap: 20px;
+  height: 100%;
 }
 
 .cat-info__label {
@@ -51,8 +58,23 @@
   margin-left: 10px;
 }
 
+.cat-info__textarea {
+  resize: none;
+  width: 100%;
+  height: 175px;
+  padding: 14px 20px;
+}
+
+
+
 @media (max-width: 747px) {
-  .cat-info__contact-wrapper {
+  .cat-info__program {
+    row-gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .cat-info__data,
+  .cat-info__contacts {
     row-gap: 15px;
   }
 
@@ -64,10 +86,20 @@
     margin-bottom: 40px;
   }
 
+  .cat-info__outline {
+    margin-bottom: 25px;
+  }
+
+  .cat-info__outline::before {
+    left: 10%;
+  }
+
   .cat-info__legend {
+    max-width: 200px;
     font-size: 24px;
     line-height: 26px;
     color: $black;
+    padding-right: 15px;
     margin-bottom: 35px;
   }
 
@@ -75,11 +107,31 @@
     font-size: 16px;
     line-height: 18px;
   }
+
+  .cat-info__textarea {
+    height: 150px;
+    padding: 9px 15px;
+  }
+
+  .cat-info__fieldset--radio {
+    padding: 25px 0;
+    border-top: 1px $input-border solid;
+    border-bottom: 1px $input-border solid;
+    border-right: 0;
+    border-left: 0;
+  }
 }
 
 @media (min-width: 748px) {
-  .cat-info__contact-wrapper {
-    row-gap: 20px;
+  .cat-info__program {
+    row-gap: 70px;
+    margin-bottom: 70px;
+  }
+
+  .cat-info__legend {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: -40px;
   }
 
   .cat-info__input {
@@ -89,7 +141,16 @@
 }
 
 @media (min-width: 1260px) {
-  .cat-info__contact-wrapper {
+  .cat-info__program {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    max-width: $cont-max-desc;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cat-info__contacts {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;

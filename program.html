@@ -83,9 +83,37 @@
     <h1 class="page__heading program__heading container">Подбор программы</h1>
     <form class="cat-info" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="cat-info__text container">Заполните анкету, и мы подберем <br>программу питания для вашего кота</h2>
-        <fieldset class="cat-info__fieldset container">
-            <legend class="cat-info__legend">Контактные данные <br>(владельца кота)</legend>
-            <div class="cat-info__contact-wrapper">
+        <div class="cat-info__program">
+            <fieldset class="cat-info__fieldset container">
+                <legend class="cat-info__legend visually-hidden">Информация о питомце</legend>
+                <div class="cat-info__data">
+                    <div class="input-wrapper">
+                        <label class="cat-info__label" for="cat-name">Имя:*</label><input class="cat-info__input input" type="text" id="cat-name" placeholder="Барсик" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="cat-info__label" for="cat-weight">Вес (кг):*</label><input class="cat-info__input input" type="number" id="cat-weight" placeholder="7" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="cat-info__label" for="cat-age">Возраст (лет):</label><input class="cat-info__input input" type="email" id="cat-age" placeholder="5">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="cat-info__fieldset cat-info__fieldset--radio">
+                <div class="container">
+                    <div class="radio-list">
+                    <input class="radio visually-hidden" id="lose-weight" name="cat-info" type="radio" checked><label class="radio-label" for="lose-weight">Похудение</label>
+                    <input class="radio visually-hidden" id="gain-weight" name="cat-info" type="radio"><label class="radio-label" for="gain-weight">Набор массы</label>
+                    <input class="radio visually-hidden" id="uncertain" name="cat-info" type="radio"><label class="radio-label" for="uncertain">Не знаю (нужен ваш совет)</label>
+                </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="cat-info__outline">
+            <fieldset class="cat-info__fieldset container">
+            <legend class="cat-info__legend">
+                <span>Контактные данные (владельца кота)</span>
+            </legend>
+            <div class="cat-info__contacts">
                 <div class="input-wrapper">
                     <label class="cat-info__label" for="email">e-mail:*</label><input class="cat-info__input input" type="email" id="email" placeholder="kuklachev.com" required>
                 </div>
@@ -94,6 +122,16 @@
                 </div>
             </div>
         </fieldset>
+        </div>
+        <div class="cat-info__outline">
+            <fieldset class="cat-info__fieldset container">
+                <legend class="cat-info__legend">
+                    <span>Комментарий</span>
+                </legend>
+                <label for="comments" class="visually-hidden">Расскажите обо всех повадках кота</label>
+                <textarea class="cat-info__textarea textarea" name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+        </div>
     </form>
     <section class="contact">
         <div class="container">

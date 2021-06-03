@@ -15,13 +15,6 @@
   overflow: hidden;
 }
 
-.page {
-  font-family: 'Oswald', sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  min-width: 320px;
-}
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -46,11 +39,9 @@ input[type="number"] {
   outline-color: $basic-green;
 }
 
-
 /* Container ... */
 
 .container {
-  //border: 1px blueviolet solid;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
@@ -61,17 +52,24 @@ input[type="number"] {
 
 @media (min-width: 748px) {
   .container {
-    max-width: 992px;
+    max-width: $cont-max-tablet;
   }
 }
 
 @media (min-width: 1260px) {
   .container {
-    max-width: 1600px;
+    max-width: $cont-max-desc;
   }
 }
 
 /* Page */
+
+.page {
+  font-family: 'Oswald', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-width: $page-min-width;
+}
 
 .page__heading {
   color: $black;
