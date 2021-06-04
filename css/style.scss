@@ -4,6 +4,7 @@
 @import "layout/input";
 @import "layout/textarea";
 @import "layout/radio";
+@import "layout/checkbox";
 @import "layout/header";
 @import "layout/menu";
 @import "layout/footer";
@@ -70,5 +71,16 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 

@@ -123,7 +123,7 @@
             </legend>
             <div class="cat-info__contacts">
                 <div class="input-wrapper">
-                    <label class="cat-info__label" for="email">e-mail:*</label><input class="cat-info__input input" type="email" id="email" placeholder="kuklachev.com" required>
+                        <label class="cat-info__label" for="email">e-mail:*</label><input class="cat-info__input input" type="email" id="email" placeholder="yuri@kuklachev.com" required>
                 </div>
                 <div class="input-wrapper">
                     <label class="cat-info__label" for="tel">Телефон:</label><input class="cat-info__input input" type="tel" id="tel" placeholder="8 960 900-60-90">
@@ -139,6 +139,23 @@
                 <label for="comments" class="visually-hidden">Расскажите обо всех повадках кота</label>
                 <textarea class="cat-info__textarea textarea" name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
+        </div>
+        <div class="cat-info__outline">
+            <fieldset class="cat-info__fieldset container">
+                <legend class="cat-info__legend cat-info__legend--optional">
+                    <span>Дополнительно</span>
+                </legend>
+                <div class="checkbox-list">
+                    <input class="checkbox visually-hidden" id="sugar-substitute" name="optional" type="checkbox" checked><label class="checkbox-label" for="sugar-substitute">Сахарозаменитель</label>
+                    <input class="checkbox visually-hidden" id="water" name="optional" type="checkbox"><label class="checkbox-label" for="water">Питьевая вода</label>
+                    <input class="checkbox visually-hidden" id="milk" name="optional" type="checkbox"><label class="checkbox-label" for="milk">Молоко</label>
+                    <input class="checkbox visually-hidden" id="vitamin" name="optional" type="checkbox"><label class="checkbox-label" for="vitamin">Витамины</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="cat-info__submit-wrapper container">
+            <button class="cat-info__submit button button--colored"><span class="button__text">Отправить заявку</span></button>
+            <p class="cat-info__required">* — Обязательные поля</p>
         </div>
     </form>
     <section class="contact">
