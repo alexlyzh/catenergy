@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let prevScroll = window.pageYOffset;
         let currentScroll;
 
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', ()=> {
             currentScroll = window.pageYOffset;
             const isHeaderHidden = () => header.classList.contains('header--hidden');
             if (currentScroll > prevScroll && !isHeaderHidden() && currentScroll > 80) {
