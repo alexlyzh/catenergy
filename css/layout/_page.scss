@@ -71,6 +71,13 @@ input[type="number"] {
   min-width: $page-min-width;
 }
 
+.page__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .page__heading {
   color: $black;
   font-size: 60px;

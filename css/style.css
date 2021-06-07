@@ -52,6 +52,12 @@ input[type="number"] {
   scroll-behavior: smooth;
   min-width: 320px; }
 
+.page__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; }
+
 .page__heading {
   color: #000000;
   font-size: 60px;
@@ -90,6 +96,26 @@ input[type="number"] {
 .button--colored:hover {
   background-color: #5EAA2F; }
 
+.outline {
+  position: relative;
+  margin-bottom: 65px; }
+
+.outline::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  height: 2px;
+  background-color: #68B738;
+  left: 0;
+  right: 0;
+  top: 18px; }
+
+@media (max-width: 747px) {
+  .outline {
+    margin-bottom: 25px; }
+
+  .outline::before {
+    left: 10%; } }
 .input-wrapper {
   display: flex;
   align-items: center; }
@@ -119,7 +145,7 @@ input[type="number"] {
     font-size: 16px;
     padding-top: 0; } }
 .textarea {
-  border-color: #E7E7E7; }
+  border: 1px #E7E7E7 solid; }
 
 .textarea:active,
 .textarea:focus {
@@ -1269,7 +1295,7 @@ input[type="number"] {
   .slider__pin {
     position: absolute;
     left: 50%;
-    cursor: pointer;
+    cursor: ew-resize;
     width: 34px;
     height: 34px;
     background-color: #FFFFFF;
@@ -1363,20 +1389,6 @@ input[type="number"] {
   color: #000000;
   margin-bottom: 65px; }
 
-.cat-info__outline {
-  position: relative;
-  margin-bottom: 65px; }
-
-.cat-info__outline::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  height: 2px;
-  background-color: #68B738;
-  left: 0;
-  right: 0;
-  top: 18px; }
-
 .cat-info__legend {
   background-color: #FFFFFF;
   font-size: 36px;
@@ -1427,12 +1439,6 @@ input[type="number"] {
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 40px; }
-
-  .cat-info__outline {
-    margin-bottom: 25px; }
-
-  .cat-info__outline::before {
-    left: 10%; }
 
   .cat-info__legend {
     max-width: 200px;

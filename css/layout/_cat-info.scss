@@ -8,22 +8,6 @@
   margin-bottom: 65px;
 }
 
-.cat-info__outline {
-  position: relative;
-  margin-bottom: 65px;
-}
-
-.cat-info__outline::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  height: 2px;
-  background-color: $basic-green;
-  left: 0;
-  right: 0;
-  top: 18px;
-}
-
 .cat-info__legend {
   background-color: $whiteF;
   font-size: 36px;
@@ -65,8 +49,6 @@
   padding: 14px 20px;
 }
 
-
-
 @media (max-width: 747px) {
   .cat-info__program {
     row-gap: 25px;
@@ -84,14 +66,6 @@
     text-transform: uppercase;
     color: $black;
     margin-bottom: 40px;
-  }
-
-  .cat-info__outline {
-    margin-bottom: 25px;
-  }
-
-  .cat-info__outline::before {
-    left: 10%;
   }
 
   .cat-info__legend {

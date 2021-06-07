@@ -1,0 +1,27 @@
+@import "../variables/variables";
+
+.outline {
+  position: relative;
+  margin-bottom: 65px;
+}
+
+.outline::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  height: 2px;
+  background-color: $basic-green;
+  left: 0;
+  right: 0;
+  top: 18px;
+}
+
+@media (max-width: 747px) {
+  .outline {
+    margin-bottom: 25px;
+  }
+
+  .outline::before {
+    left: 10%;
+  }
+}
