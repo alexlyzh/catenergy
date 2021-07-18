@@ -1,8 +1,8 @@
-@import "../variables/variables";
+@import "../../variables/variables";
 
 .intro {
   position: relative;
-  min-width: 320px;
+  min-width: $page-min-width;
   background-repeat: no-repeat;
 }
 
@@ -14,7 +14,7 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .intro {
     background-image: url('../img/intro/intro-back-mobile@1x.jpg');
     background-position: 50% 33%;
@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: 748px) and (max-width: 1259px) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .intro {
     text-align: left;
     padding-top: 80px;
@@ -76,6 +76,11 @@
     justify-self: center;
   }
 
+  .intro__img {
+    width: 709px;
+    height: 609px;
+  }
+
   .intro__button {
     position: absolute;
     top: 37.5%;
@@ -87,7 +92,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .intro {
     text-align: left;
     padding-bottom: 55px;
@@ -123,6 +128,11 @@
     grid-area: pic;
     align-self: start;
     justify-self: start;
+  }
+
+  .intro__img {
+    width: 552px;
+    height: 499px;
   }
 
   .intro__button {

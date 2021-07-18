@@ -1,6 +1,7 @@
 @import "../variables/variables";
 
-.program .contact {
+.program .contact,
+.products .contact {
   background-color: $basic-grey;
 }
 
@@ -34,7 +35,7 @@
   width: 100%;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .contact__heading {
     font-size: 16px;
   }
@@ -48,7 +49,7 @@
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .contact__address {
     grid-row-gap: 25px;
   }
@@ -62,7 +63,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .contact__address {
     display: none;
   }

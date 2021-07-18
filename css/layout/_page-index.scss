@@ -4,7 +4,7 @@
   position: relative;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .index__heading {
     margin-bottom: 25px;
   }
@@ -21,7 +21,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .index__heading {
     padding-top: 90px;
     margin-bottom: 80px;

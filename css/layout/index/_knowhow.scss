@@ -1,4 +1,4 @@
-@import "../variables/variables";
+@import "../../variables/variables";
 
 .knowhow__heading {
   font-size: 60px;
@@ -54,7 +54,7 @@
   background-image: url("../img/knowhow/icon_alarm.svg");
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .knowhow {
     margin-bottom: 40px;
   }
@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: 748px) and (max-width: 1259px) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .knowhow {
     max-width: 748px;
     margin-bottom: 45px;
@@ -117,7 +117,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .knowhow {
     margin-bottom: 10px;
   }

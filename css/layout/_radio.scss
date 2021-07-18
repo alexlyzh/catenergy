@@ -54,13 +54,13 @@
   content: '';
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .radio-label {
     padding-left: 50px;
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .radio-list {
     padding: 25px 28px;
     border: 1px $input-border solid;

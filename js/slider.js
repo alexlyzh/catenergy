@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
         catsContainer.addEventListener('touchstart', toggleCats);
         catsContainer.addEventListener('mousedown', toggleCats);
     // Кнопки ДО и ПОСЛЕ
-        function showState(ev) {
-            if (ev.target.getAttribute('id') === 'before-btn') {
+        function showState(evt) {
+            if (evt.target.getAttribute('id') === 'before-btn') {
                 showBefore();
             } else {
                 showAfter();

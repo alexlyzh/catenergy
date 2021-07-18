@@ -16,7 +16,7 @@
   top: 18px;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .outline {
     margin-bottom: 25px;
   }

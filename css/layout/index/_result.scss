@@ -1,4 +1,4 @@
-@import "../variables/variables";
+@import "../../variables/variables";
 
 .result {
   display: grid;
@@ -31,7 +31,7 @@
   color: $dark-grey;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .result {
     justify-content: center;
     grid-auto-columns: 125px;
@@ -52,7 +52,7 @@
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .result__description {
     background-color: $whiteF;
     padding: 0 8px;
@@ -61,7 +61,7 @@
 }
 
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .result__description {
     background-color: $basic-grey;
   }

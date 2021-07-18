@@ -56,7 +56,7 @@
   display: none;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .header {
     background-color: $whiteF;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .header {
     padding: 15px 20px;
     background-color: $whiteF;
@@ -109,7 +109,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .header--transparent {
     background: transparent 0 0;
   }

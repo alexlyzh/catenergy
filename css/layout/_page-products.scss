@@ -1,0 +1,22 @@
+@import "../variables/variables";
+
+@media (max-width: $tablet-width - 1) {
+  .products__heading {
+    padding-top: 90px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .products__heading {
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products__heading {
+    padding-top: 160px;
+    padding-bottom: 55px;
+  }
+}

@@ -11,18 +11,22 @@
 @import "layout/footer";
 
 // index.html
-@import "layout/index";
-@import "layout/intro";
-@import "layout/catalog";
-@import "layout/knowhow";
-@import "layout/demo";
-@import "layout/result";
-@import "layout/slider";
+@import "layout/page-index";
+@import "layout/index/intro";
+@import "layout/index/catalog";
+@import "layout/index/knowhow";
+@import "layout/index/demo";
+@import "layout/index/result";
+@import "layout/index/slider";
 @import "layout/contact";
 
 // program.html
-@import "layout/program";
-@import "layout/cat-info";
+@import "layout/page-program";
+@import "layout/index/cat-info";
+
+// products.html
+@import "layout/page-products";
+@import "layout/products/assortment";
 
 // Reset CSS
 /* http://meyerweb.com/eric/tools/css/reset/

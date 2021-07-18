@@ -1,29 +1,24 @@
 @import "../variables/variables";
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .program__header {
     border-bottom: 1px solid $header-bottom;
   }
-}
 
-
-@media (max-width: 747px) {
   .program__heading {
     padding-top: 90px;
     padding-bottom: 35px;
   }
 }
 
-@media (min-width: 748px) {
-
+@media (min-width: $tablet-width) {
   .program__heading {
     padding-top: 140px;
     padding-bottom: 60px;
   }
 }
 
-@media (min-width: 1260px) {
-
+@media (min-width: $desktop-width) {
   .program__heading {
     padding-top: 160px;
     padding-bottom: 55px;

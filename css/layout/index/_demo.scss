@@ -1,4 +1,4 @@
-@import "../variables/variables";
+@import "../../variables/variables";
 
 .demo {
   position: relative;
@@ -128,7 +128,7 @@
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .demo::after {
     content: '';
     position: absolute;

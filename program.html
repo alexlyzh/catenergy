@@ -80,7 +80,7 @@
         <nav class="header__menu menu menu--closed">
             <ul class="menu__list menu__list--modified" id="menu__list">
                 <li class="menu__item"><a href="index.html" class="menu__link menu__link--modified">Главная</a></li>
-                <li class="menu__item"><a href="catalog.html" class="menu__link menu__link--modified">Каталог продукции</a></li>
+                <li class="menu__item"><a href="products.html" class="menu__link menu__link--modified">Каталог продукции</a></li>
                 <li class="menu__item"><a href="program.html" class="menu__link menu__link--modified menu__link--current">Подбор программы</a></li>
             </ul>
         </nav>
@@ -96,13 +96,13 @@
                 <legend class="cat-info__legend visually-hidden">Информация о питомце</legend>
                 <div class="cat-info__data">
                     <div class="input-wrapper">
-                        <label class="cat-info__label" for="cat-name">Имя:*</label><input class="cat-info__input input" type="text" id="cat-name" placeholder="Барсик" required>
+                        <label class="cat-info__label" for="cat-name">Имя:*</label><input class="cat-info__input input" name="cat-name" type="text" id="cat-name" placeholder="Барсик" required>
                     </div>
                     <div class="input-wrapper">
-                        <label class="cat-info__label" for="cat-weight">Вес (кг):*</label><input class="cat-info__input input" type="number" id="cat-weight" placeholder="7" required>
+                        <label class="cat-info__label" for="cat-weight">Вес (кг):*</label><input class="cat-info__input input" name="cat-weight" type="number" id="cat-weight" placeholder="7" required>
                     </div>
                     <div class="input-wrapper">
-                        <label class="cat-info__label" for="cat-age">Возраст (лет):</label><input class="cat-info__input input" type="email" id="cat-age" placeholder="5">
+                        <label class="cat-info__label" for="cat-age">Возраст (лет):</label><input class="cat-info__input input" name="cat-age" type="email" id="cat-age" placeholder="5">
                     </div>
                 </div>
             </fieldset>
@@ -123,10 +123,10 @@
             </legend>
             <div class="cat-info__contacts">
                 <div class="input-wrapper">
-                        <label class="cat-info__label" for="email">e-mail:*</label><input class="cat-info__input input" type="email" id="email" placeholder="yuri@kuklachev.com" required>
+                        <label class="cat-info__label" for="email">e-mail:*</label><input class="cat-info__input input" name="email" type="email" id="email" placeholder="yuri@kuklachev.com" required>
                 </div>
                 <div class="input-wrapper">
-                    <label class="cat-info__label" for="tel">Телефон:</label><input class="cat-info__input input" type="tel" id="tel" placeholder="8 960 900-60-90">
+                    <label class="cat-info__label" for="tel">Телефон:</label><input class="cat-info__input input" name="tel" type="tel" id="tel" placeholder="8 960 900-60-90">
                 </div>
             </div>
         </fieldset>

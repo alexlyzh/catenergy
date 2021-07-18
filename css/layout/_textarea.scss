@@ -21,7 +21,7 @@
   color: $dark-grey;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .textarea,
   .textarea::placeholder {
     font-size: 16px;

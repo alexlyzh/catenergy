@@ -50,13 +50,13 @@ input[type="number"] {
   width: 100%;
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .container {
     max-width: $cont-max-tablet;
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: $desktop-width) {
   .container {
     max-width: $cont-max-desc;
   }
@@ -84,7 +84,7 @@ input[type="number"] {
   line-height: 60px;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .page__heading {
     font-size: 36px;
     line-height: 36px;

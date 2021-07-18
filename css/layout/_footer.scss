@@ -40,7 +40,7 @@
   height: 34px;
 }
 
-@media (max-width: 747px) {
+@media (max-width: $tablet-width - 1) {
   .footer {
     padding: 40px 0 20px 0;
   }
@@ -69,7 +69,7 @@
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: $tablet-width) {
   .footer {
     padding: 55px 0;
   }
