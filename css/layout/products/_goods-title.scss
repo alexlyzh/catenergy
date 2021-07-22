@@ -1,0 +1,31 @@
+@import "../../variables/variables";
+
+.goods-title {
+  color: $almost-black;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+@media (max-width: $assortment-tablet-width - 1) {
+  .goods-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods-title--loader {
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: $assortment-tablet-width) {
+  .goods-title--loader {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-title {
+    line-height: 21px;
+  }
+}

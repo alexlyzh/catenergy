@@ -1,0 +1,23 @@
+@import "../../variables/variables";
+
+.goods-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: $dark-grey;
+}
+
+@media (min-width: $assortment-tablet-width) {
+  .goods-text {
+    font-size: 16px;
+  }
+
+  .goods-text--loader {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //white-space: nowrap;
+    line-height: 18px;
+    max-width: 170px;
+    max-height: 35px;
+    margin-bottom: auto;
+  }
+}
