@@ -37,10 +37,6 @@
 }
 
 @media (max-width: $assortment-tablet-width - 1) {
-  .assortment {
-    margin-bottom: 30px;
-  }
-
   .assortment__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -98,7 +94,6 @@
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-column-gap: 25px;
     grid-row-gap: 35px;
-    margin-bottom: 70px;
   }
 
   .assortment__item {

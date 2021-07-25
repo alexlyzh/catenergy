@@ -1,0 +1,46 @@
+@import "../../variables/variables";
+
+.optional {
+  margin-bottom: 35px;
+}
+
+.optional__heading {
+  background-color: $whiteF;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+}
+
+@media (min-width: $assortment-tablet-width) {
+  .optional {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .optional__heading {
+    max-width: 200px;
+    font-size: 24px;
+    line-height: 26px;
+    color: $black;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .optional {
+    margin-bottom: 75px;
+  }
+
+  .optional__heading {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: -40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .optional {
+    margin-bottom: 85px;
+  }
+}

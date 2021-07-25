@@ -26,9 +26,12 @@
 
 // products.html
 @import "layout/page-products";
+@import "layout/products/products";
 @import "layout/products/assortment";
 @import "layout/products/goods-title";
 @import "layout/products/goods-text";
+@import "layout/products/optional";
+@import "layout/products/gift";
 
 // Reset CSS
 /* http://meyerweb.com/eric/tools/css/reset/

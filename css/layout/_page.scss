@@ -60,6 +60,11 @@ input[type="number"] {
   .container {
     max-width: $cont-max-desc;
   }
+
+  .gift .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /* Page */

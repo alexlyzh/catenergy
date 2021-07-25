@@ -1,0 +1,25 @@
+@import "../../variables/variables";
+
+@media (max-width: $assortment-tablet-width - 1) {
+  .products {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $assortment-tablet-width) {
+  .products {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .products {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products {
+    margin-bottom: 75px;
+  }
+}

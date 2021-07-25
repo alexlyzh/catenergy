@@ -1,0 +1,78 @@
+@import "../../variables/variables";
+
+.gift-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 289px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $basic-green;
+}
+
+.gift__icon {
+  width: 78px;
+  height: 80px;
+}
+
+.gift_text {
+  font-family: Arial, sans-serif;
+  color: $whiteF;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 165px;
+}
+
+@media (max-width: $assortment-tablet-width - 1) {
+  .gift__icon {
+    margin-top: 50px;
+    margin-bottom: 45px;
+  }
+
+  .gift-wrapper {
+    background-image: url('../img/products/gift-mobile@1x.jpeg');
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/products/gift-mobile@2x.jpeg');
+    }
+  }
+}
+
+@media (min-width: $assortment-tablet-width) and (max-width: $desktop-width) {
+  .gift-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .gift_text {
+    text-align: left;
+  }
+
+  .gift-wrapper {
+    min-height: 200px;
+    background-image: url('../img/products/gift-tablet@1x.jpeg');
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/products/gift-tablet@2x.jpeg');
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    width: 280px;
+  }
+
+  .gift__icon {
+    margin-top: 50px;
+    margin-bottom: 45px;
+  }
+
+  .gift-wrapper {
+    background-image: url('../img/products/gift-desktop@1x.jpeg');
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/products/gift-desktop@2x.jpeg');
+    }
+  }
+}
