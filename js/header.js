@@ -100,6 +100,6 @@ const onScrollHeader = () => {
 
 onScrollHeader();
 
-menuOverlay.addEventListener('click', () => closeHeaderMenu());
+menuOverlay.addEventListener('click', closeHeaderMenu);
 
 
