@@ -1644,7 +1644,7 @@ input[type="number"] {
   .assortment__btn {
     grid-column: 1/3;
     grid-row: 3/4;
-    margin-top: 22px; } }
+    margin-top: 15px; } }
 @media (min-width: 450px) {
   .assortment {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
@@ -1793,6 +1793,116 @@ input[type="number"] {
 @media (min-width: 1260px) {
   .optional {
     margin-bottom: 85px; } }
+.additional__description {
+  font-family: Arial, sans-serif;
+  color: #444444; }
+
+.additional__btn {
+  width: 100%; }
+
+@media (max-width: 449px) {
+  .additional {
+    border-top: 1px solid #CDCDCD;
+    margin-bottom: 40px; }
+
+  .additional__item {
+    padding-top: 13px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #CDCDCD; }
+
+  .additional__description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 14px; }
+
+  .additional__btn {
+    margin-top: 15px; } }
+@media (min-width: 450px) and (max-width: 1259px) {
+  .additional {
+    border: 1px solid #CDCDCD; }
+
+  .additional__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 60px; }
+
+  .additional__item:not(:last-child) {
+    border-bottom: 1px solid #CDCDCD; }
+
+  .additional__title,
+  .additional__price {
+    align-self: center;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+  .additional__description {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right; }
+
+  .additional__units,
+  .additional__price {
+    align-self: center; }
+
+  .additional__btn {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 15px; } }
+@media (min-width: 450px) and (max-width: 747px) {
+  .optional__wrapper {
+    margin-top: 50px; }
+
+  .additional {
+    margin-bottom: 45px; }
+
+  .additional__item {
+    padding: 10px 30px 20px; } }
+@media (min-width: 748px) and (max-width: 1259px) {
+  .optional__wrapper {
+    margin-bottom: 80px; }
+
+  .additional {
+    margin-bottom: 70px; }
+
+  .additional__item {
+    padding: 15px 30px 25px; } }
+@media (min-width: 1260px) {
+  .optional__wrapper {
+    display: grid;
+    grid-template-columns: 3.25fr .75fr;
+    grid-column-gap: 80px; }
+
+  .additional {
+    border-bottom: 1px solid #CDCDCD; }
+
+  .additional__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #CDCDCD; }
+
+  .additional__description {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 20px; }
+
+  .additional__units {
+    justify-self: left; }
+
+  .additional__price {
+    justify-self: right; } }
 .gift-wrapper {
   display: flex;
   flex-direction: column;
@@ -1826,7 +1936,7 @@ input[type="number"] {
     .gift-wrapper {
       background-image: url("../img/products/gift-mobile@2x.jpeg"); } }
 
-@media (min-width: 450px) and (max-width: 1260px) {
+@media (min-width: 450px) and (max-width: 1259px) {
   .gift-wrapper {
     flex-direction: row;
     justify-content: space-around;
@@ -1838,19 +1948,19 @@ input[type="number"] {
   .gift-wrapper {
     min-height: 200px;
     background-image: url("../img/products/gift-tablet@1x.jpeg"); } }
-  @media (min-width: 450px) and (max-width: 1260px) and (min-resolution: 2dppx) {
+  @media (min-width: 450px) and (max-width: 1259px) and (min-resolution: 2dppx) {
     .gift-wrapper {
       background-image: url("../img/products/gift-tablet@2x.jpeg"); } }
 
 @media (min-width: 1260px) {
-  .gift {
-    width: 280px; }
-
   .gift__icon {
     margin-top: 50px;
     margin-bottom: 45px; }
 
   .gift-wrapper {
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
     background-image: url("../img/products/gift-desktop@1x.jpeg"); } }
   @media (min-width: 1260px) and (min-resolution: 2dppx) {
     .gift-wrapper {
