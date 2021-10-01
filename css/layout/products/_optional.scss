@@ -17,6 +17,18 @@
   }
 }
 
+@media (min-width: $assortment-tablet-width) and (max-width: $tablet-width - 1) {
+  .optional__wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .optional__wrapper {
+    margin-bottom: 80px;
+  }
+}
+
 @media (max-width: $tablet-width - 1) {
   .optional__heading {
     max-width: 200px;
@@ -42,5 +54,11 @@
 @media (min-width: $desktop-width) {
   .optional {
     margin-bottom: 85px;
+  }
+
+  .optional__wrapper {
+    display: grid;
+    grid-template-columns: 3.25fr .75fr;
+    grid-column-gap: 80px;
   }
 }

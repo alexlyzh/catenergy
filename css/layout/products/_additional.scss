@@ -79,10 +79,6 @@
 }
 
 @media (min-width: $assortment-tablet-width) and (max-width: $tablet-width - 1) {
-  .optional__wrapper {
-    margin-top: 50px;
-  }
-
   .additional {
     margin-bottom: 45px;
   }
@@ -93,10 +89,6 @@
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
-  .optional__wrapper {
-    margin-bottom: 80px;
-  }
-
   .additional {
     margin-bottom: 70px;
   }
@@ -107,12 +99,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .optional__wrapper {
-    display: grid;
-    grid-template-columns: 3.25fr .75fr;
-    grid-column-gap: 80px;
-  }
-
   .additional {
     border-bottom: 1px solid $special-grey;
   }
