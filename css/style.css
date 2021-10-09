@@ -1770,7 +1770,9 @@ input[type="number"] {
   background-color: #FFFFFF;
   font-size: 36px;
   line-height: 36px;
-  color: #000000; }
+  color: #000000;
+  display: inline-block;
+  }
 
 @media (min-width: 450px) {
   .optional {
