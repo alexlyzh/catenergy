@@ -87,9 +87,6 @@ input[type="number"] {
   color: #444444;
   background-color: #F2F2F2; }
 
-.button:hover {
-  background-color: #EBEBEB; }
-
 .button:active .button__text {
   opacity: 0.3; }
 
@@ -1004,7 +1001,7 @@ input[type="number"] {
 @media (max-width: 747px) {
   .demo {
     padding: 25px 0;
-    background-color: #EAEAEA; }
+    background-color: #F2F2F2; }
 
   .demo__grid {
     overflow: hidden; }
@@ -1050,7 +1047,7 @@ input[type="number"] {
     right: 0;
     bottom: 0;
     height: 494px;
-    background-color: #EAEAEA; }
+    background-color: #F2F2F2; }
 
   .demo__grid {
     grid-template-columns: 1fr 1fr;
@@ -1166,7 +1163,7 @@ input[type="number"] {
   .result__description {
     font-size: 12px;
     line-height: 12px;
-    background-color: #EAEAEA;
+    background-color: #F2F2F2;
     width: 82px;
     transform: translateY(13px); } }
 @media (min-width: 748px) {
@@ -1255,7 +1252,7 @@ input[type="number"] {
     margin-bottom: 20px; }
 
   .slider__pic {
-    background-color: #EAEAEA;
+    background-color: #F2F2F2;
     transition: all 500ms ease 0s; }
 
   .slider__pic-before {

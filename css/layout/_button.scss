@@ -17,10 +17,6 @@
   background-color: $basic-grey;
 }
 
-.button:hover {
-  background-color: $button-back;
-}
-
 .button:active .button__text {
   opacity: 0.3;
 }
