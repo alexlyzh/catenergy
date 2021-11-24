@@ -1,4 +1,4 @@
-import {debounce, isScrolled} from "./main.js";
+import {debounce, isScrolled} from "./utils.js";
 
 // Получаем ссылки на DOM-элементы
 const header = document.querySelector('.header');

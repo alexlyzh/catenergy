@@ -1,0 +1,28 @@
+{
+  "name": "catenergy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "postcss": "postcss css/style.css --use autoprefixer -o main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlyzh/catenergy.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlyzh/catenergy/issues"
+  },
+  "homepage": "https://github.com/alexlyzh/catenergy#readme",
+  "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "postcss": "8.3.11",
+    "postcss-cli": "9.0.2",
+    "postcss-loader": "6.2.0",
+    "webpack": "5.64.3",
+    "webpack-cli": "4.9.1"
+  }
+}

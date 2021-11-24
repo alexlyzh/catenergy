@@ -1,4 +1,3 @@
-// Объявляем дебаунсер
 export function debounce(func, wait, immediate) {
     let timeout;
     return function executedFunction() {
@@ -19,8 +18,7 @@ export function isScrolled() {
     return document.documentElement.scrollTop > 0;
 }
 
-// Чтобы отличить событие мыши от тач-события
-export function touchEventChecker(event) {
+export function checkTouchEvent(event) {
     if (event.changedTouches) {
         return event.changedTouches[0];
     }
